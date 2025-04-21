@@ -5,7 +5,7 @@ About the Project
 -----------------
 This project allows you to extract questions from exam dump PDFs and simulate a quiz in your browser.
 
-1. Download exam dump files in PDF format from https://www.allfreedumps.com/.
+1. Download exam dump files manually in PDF format from https://www.allfreedumps.com/.
 
 2. How to Use:
    - (Optional) Create a Python virtual environment.
