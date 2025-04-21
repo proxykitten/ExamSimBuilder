@@ -1,0 +1,204 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px; /* Add some padding to body */
+}
+
+/* Container Styles for Quiz and Result */
+.container, .quiz-container, .result-container {
+    width: 100%;
+    max-width: 900px; /* Increase the max-width for a larger container */
+    margin: 20px auto; /* Center the containers with margin */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align everything to the left */
+}
+
+/* Header Styling */
+h1, h2 {
+    font-size: 2.5rem;
+    color: #3e4e61;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #3e4e61;
+}
+
+/* Quiz Page Styling */
+.quiz-container {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-height: 80vh; /* Limit the height */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.question-text {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    text-align: left; /* Align question text to the left */
+    word-wrap: break-word;  /* Break long words */
+    overflow-wrap: break-word; /* Prevent text from overflowing */
+}
+
+form {
+    margin-top: 20px;
+}
+
+.options {
+    text-align: left; /* Align options to the left */
+}
+
+label {
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: none;
+}
+
+button[onclick] {
+    background-color: #28a745;
+    margin-top: 20px;
+}
+
+button[onclick]:hover {
+    background-color: #218838;
+}
+
+/* Result Page Styling */
+.result-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.result-container h2 {
+    font-size: 2rem;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.result-container p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.result-container .answered p {
+    font-size: 1rem;
+    color: #555;
+}
+
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #28a745;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container, .quiz-container, .result-container {
+        width: 90%;
+    }
+
+    h1, h2 {
+        font-size: 2rem;
+    }
+
+    .quiz-container, .result-container {
+        padding: 20px;
+    }
+}
+
+/* Result Page Styling */
+.result-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-height: 80vh; /* Limit the height of the result container */
+    overflow-y: auto; /* Enable scrolling if the content overflows */
+}
+
+.result-container h2 {
+    font-size: 2rem;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.result-container p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.result-container .answered p {
+    font-size: 1rem;
+    color: #555;
+}
+
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}

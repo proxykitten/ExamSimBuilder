@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Result</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="result-container">
+    <h2>Quiz Finished</h2>
+    <p>Your Score: <%= score %> (<%= percentage %>%)</p>
+    <h3>Answered Questions</h3>
+    <% answeredQuestions.forEach((question, index) => { %>
+      <div class="answered">
+        <p><strong>Question <%= index + 1 %>:</strong> <%= question.question %></p>
+        <p>Your Answer: <%= question.userAnswer %></p>
+        <p>Correct Answer: <%= question.correctAnswer %></p>
+        <p><strong><%= question.isCorrect ? "Correct" : "Incorrect" %></strong></p>
+        <p><em><%= question.explanation %></em></p>
+        <hr>
+      </div>
+    <% }); %>
+    <a href="/">Back to Home</a>
+  </div>
+</body>
+</html>

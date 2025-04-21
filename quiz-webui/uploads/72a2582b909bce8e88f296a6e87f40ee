@@ -1,0 +1,1497 @@
+[
+  {
+    "question": "Your company has a single sign-on (SSO) identity provider that supports Security Assertion Markup Language (SAML) integration with service providers. Your\ncompany has users in Cloud Identity. You would like users to authenticate using your company’s SSO provider. What should you do?",
+    "options": {
+      "A": "In Cloud Identity, set up SSO with Google as an identity provider to access custom SAML apps.",
+      "B": "In Cloud Identity, set up SSO with a third-party identity provider with Google as a service provider.",
+      "C": "Obtain OAuth 2.0 credentials, configure the user consent screen, and set up OAuth 2.0 for Mobile & Desktop Apps.",
+      "D": "Obtain OAuth 2.0 credentials, configure the user consent screen, and set up OAuth 2.0 for Web Server Applications."
+    },
+    "answer": "B",
+    "explanation": "https://support.google.com/cloudidentity/answer/6262987?hl=en&ref_topic=7558767",
+    "source": "ace-sample-1.pdf",
+    "number": 1
+  },
+  {
+    "question": "You will have several applications running on different Compute Engine instances in the same project. You want to specify at a more granular level the service\naccount each instance uses when calling Google Cloud APIs. What should you do?",
+    "options": {
+      "A": "When creating the instances, specify a Service Account for each instance",
+      "B": "When creating the instances, assign the name of each Service Account as instance metadata",
+      "C": "After starting the instances, use gcloud compute instances update to specify a Service Account for each instance",
+      "D": "After starting the instances, use gcloud compute instances update to assign the name of the relevantService Account as instance metadata"
+    },
+    "answer": "A",
+    "explanation": "https://cloud.google.com/compute/docs/access/service-accounts#associating_a_service_account_to_an_instance",
+    "source": "ace-sample-1.pdf",
+    "number": 2
+  },
+  {
+    "question": "Your learn wants to deploy a specific content management system (CMS) solution lo Google Cloud. You need a quick and easy way to deploy and install the\nsolution. What should you do?",
+    "options": {
+      "A": "Search for the CMS solution in Google Cloud Marketplac",
+      "B": "Use gcloud CLI to deploy the solution.",
+      "C": "Search for the CMS solution in Google Cloud Marketplac",
+      "D": "Deploy the solution directly from Cloud Marketplace."
+    },
+    "answer": "B",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 3
+  },
+  {
+    "question": "You have an on-premises data analytics set of binaries that processes data files in memory for about 45 minutes every midnight. The sizes of those data files\nrange from 1 gigabyte to 16 gigabytes. You want to migrate this application to Google Cloud with minimal effort and cost. What should you do?",
+    "options": {
+      "A": "Upload the code to Cloud Function",
+      "B": "Use Cloud Scheduler to start the application.",
+      "C": "Create a container for the set of binarie",
+      "D": "Use Cloud Scheduler to start a Cloud Run job for the container."
+    },
+    "answer": "B",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 4
+  },
+  {
+    "question": "You are designing an application that lets users upload and share photos. You expect your application to grow really fast and you are targeting a worldwide\naudience. You want to delete uploaded photos after 30 days. You want to minimize costs while ensuring your application is highly available. Which GCP storage\nsolution should you choose?",
+    "options": {
+      "A": "Persistent SSD on VM instances.",
+      "B": "Cloud Filestore.",
+      "C": "Multiregional Cloud Storage bucket.",
+      "D": "Cloud Datastore database."
+    },
+    "answer": "C",
+    "explanation": "Cloud Storage allows world-wide storage and retrieval of any amount of data at any time. We dont need to set up auto-scaling ourselves. Cloud Storage\nautoscaling is managed by GCP. Cloud Storage is an object store so it is suitable for storing photos. Cloud Storage allows world-wide storage and retrieval so\ncater well to our worldwide audience. Cloud storage provides us lifecycle rules that can be configured to automatically delete objects older than 30 days. This also\nfits our requirements. Finally, Google Cloud Storage offers several storage classes such as Nearline Storage ($0.01 per GB per Month) Coldline Storage ($0.007\nper GB per Month) and Archive Storage ($0.004 per GB per month) which are significantly cheaper than any of the options above.\nRef: https://cloud.google.com/storage/docs\nRef: https://cloud.google.com/storage/pricing\nGuaranteed success with Our exam guides visit - https://www.certshared.com\nCertshared now are offering 100% pass ensure Associate-Cloud-Engineer dumps!\nhttps://www.certshared.com/exam/Associate-Cloud-Engineer/ (244 Q&As)",
+    "source": "ace-sample-1.pdf",
+    "number": 5
+  },
+  {
+    "question": "You have one project called proj-sa where you manage all your service accounts. You want to be able to use a service account from this project to take snapshots\nof VMs running in another project called proj-vm. What should you do?",
+    "options": {
+      "A": "Download the private key from the service account, and add it to each VMs custom metadata.",
+      "B": "Download the private key from the service account, and add the private key to each VM’s SSH keys.",
+      "C": "Grant the service account the IAM Role of Compute Storage Admin in the project called proj-vm.",
+      "D": "When creating the VMs, set the service account’s API scope for Compute Engine to read/write."
+    },
+    "answer": "C",
+    "explanation": "https://gtseres.medium.com/using-service-accounts-across-projects-in-gcp-cf9473fef8f0\nYou create the service account in proj-sa and take note of the service account email, then you go to proj-vm in IAM > ADD and add the service account's email as\nnew member and give it the Compute Storage Admin role.\nhttps://cloud.google.com/compute/docs/access/iam#compute.storageAdmin",
+    "source": "ace-sample-1.pdf",
+    "number": 6
+  },
+  {
+    "question": "You are developing a new application and are looking for a Jenkins installation to build and deploy your source code. You want to automate the installation as\nquickly and easily as possible. What should you do?",
+    "options": {
+      "A": "Deploy Jenkins through the Google Cloud Marketplace.",
+      "B": "Create a new Compute Engine instanc",
+      "C": "Run the Jenkins executable.",
+      "D": "Create a new Kubernetes Engine cluste"
+    },
+    "answer": "A",
+    "explanation": "Installing Jenkins\nIn this section, you use Cloud Marketplace to provision a Jenkins instance. You customize this instance to use the agent image you created in the previous\nsection.\nGo to the Cloud Marketplace solution for Jenkins. Click Launch on Compute Engine.\nChange the Machine Type field to 4 vCPUs 15 GB Memory, n1-standard-4.\nMachine type selection for Jenkins deployment.\nClick Deploy and wait for your Jenkins instance to finish being provisioned. When it is finished, you will see: Jenkins has been deployed.\nhttps://cloud.google.com/solutions/using-jenkins-for-distributed-builds-on-compute-engine#installing_jenkins",
+    "source": "ace-sample-1.pdf",
+    "number": 7
+  },
+  {
+    "question": "Your organization is a financial company that needs to store audit log files for 3 years. Your organization has hundreds of Google Cloud projects. You need to\nimplement a cost-effective approach for log file retention. What should you do?",
+    "options": {
+      "A": "Create an export to the sink that saves logs from Cloud Audit to BigQuery.",
+      "B": "Create an export to the sink that saves logs from Cloud Audit to a Coldline Storage bucket.",
+      "C": "Write a custom script that uses logging API to copy the logs from Stackdriver logs to BigQuery.",
+      "D": "Export these logs to Cloud Pub/Sub and write a Cloud Dataflow pipeline to store logs to Cloud SQL."
+    },
+    "answer": "B",
+    "explanation": "Coldline Storage is the perfect service to store audit logs from all the projects and is very cost-efficient as well. Coldline Storage is a very low-cost, highly durable\nstorage service for storing infrequently accessed data.\nGuaranteed success with Our exam guides visit - https://www.certshared.com\nCertshared now are offering 100% pass ensure Associate-Cloud-Engineer dumps!\nhttps://www.certshared.com/exam/Associate-Cloud-Engineer/ (244 Q&As)NEW QUESTION 9\nYou want to send and consume Cloud Pub/Sub messages from your App Engine application. The Cloud Pub/Sub API is currently disabled. You will use a service\naccount to authenticate your application to the API. You want to make sure your application can use Cloud Pub/Sub. What should you do?\nA. Enable the Cloud Pub/Sub API in the API Library on the GCP Console.\nB. Rely on the automatic enablement of the Cloud Pub/Sub API when the Service Account accesses it.\nC. Use Deployment Manager to deploy your applicatio\nD. Rely on the automatic enablement of all APIs used by the application being deployed.\nE. Grant the App Engine Default service account the role of Cloud Pub/Sub Admi\nF. Have your application enable the API on the first connection to Cloud Pub/Sub.\nAnswer: A\nExplanation: \nQuickstart: using the Google Cloud Console\nThis page shows you how to perform basic tasks in Pub/Sub using the Google Cloud Console. Note: If you are new to Pub/Sub, we recommend that you start with\nthe interactive tutorial. Before you begin\nSet up a Cloud Console project. Set up a project\nClick to:\nCreate or select a project.\nEnable the Pub/Sub API for that project.\nYou can view and manage these resources at any time in the Cloud Console. Install and initialize the Cloud SDK.\nNote: You can run the gcloud tool in the Cloud Console without installing the Cloud SDK. To run the gcloud tool in the Cloud Console, use Cloud Shell .\nhttps://cloud.google.com/pubsub/docs/quickstart-console",
+    "source": "ace-sample-1.pdf",
+    "number": 8
+  },
+  {
+    "question": "Your finance team wants to view the billing report for your projects. You want to make sure that the finance team does not get additional permissions to the project.\nWhat should you do?",
+    "options": {
+      "A": "Add the group for the finance team to roles/billing user role.",
+      "B": "Add the group for the finance team to roles/billing admin role.",
+      "C": "Add the group for the finance team to roles/billing viewer role.",
+      "D": "Add the group for the finance team to roles/billing project/Manager role."
+    },
+    "answer": "C",
+    "explanation": "\"Billing Account Viewer access would usually be granted to finance teams, it provides access to spend information, but does not confer the right to link or unlink\nprojects or otherwise manage the properties of the billing account.\" https://cloud.google.com/billing/docs/how-to/billing-access",
+    "source": "ace-sample-1.pdf",
+    "number": 9
+  },
+  {
+    "question": "You have been asked to set up the billing configuration for a new Google Cloud customer. Your customer wants to group resources that share common IAM\npolicies. What should you do?",
+    "options": {
+      "A": "Use labels to group resources that share common IAM policies",
+      "B": "Use folders to group resources that share common IAM policies",
+      "C": "Set up a proper billing account structure to group IAM policies",
+      "D": "Set up a proper project naming structure to group IAM policies"
+    },
+    "answer": "B",
+    "explanation": "Folders are nodes in the Cloud Platform Resource Hierarchy. A folder can contain projects, other folders, or a combination of both. Organizations can use folders\nto group projects under the organization node in a hierarchy. For example, your organization might contain multiple departments, each with its own set of Google\nCloud resources. Folders allow you to group these resources on a per-department basis. Folders are used to group resources that share common IAM policies.\nWhile a folder can contain multiple folders or resources, a given folder or resource can have exactly one parent.\nhttps://cloud.google.com/resource-manager/docs/creating-managing-folders",
+    "source": "ace-sample-1.pdf",
+    "number": 10
+  },
+  {
+    "question": "You received a JSON file that contained a private key of a Service Account in order to get access to several resources in a Google Cloud project. You downloaded\nand installed the Cloud SDK and want to use this private key for authentication and authorization when performing gcloud commands. What should you do?",
+    "options": {
+      "A": "Use the command gcloud auth login and point it to the private key",
+      "B": "Use the command gcloud auth activate-service-account and point it to the private key",
+      "C": "Place the private key file in the installation directory of the Cloud SDK and rename it to \"credentials ison\"",
+      "D": "Place the private key file in your home directory and rename it to ‘’GOOGLE_APPUCATION_CREDENTiALS\"."
+    },
+    "answer": "B",
+    "explanation": "Authorizing with a service account\ngcloud auth activate-service-account authorizes access using a service account. As with gcloud init and gcloud auth login, this command saves the service\naccount credentials to the local system on successful completion and sets the specified account as the active account in your Cloud SDK configuration.\nhttps://cloud.google.com/sdk/docs/authorizing#authorizing_with_a_service_account",
+    "source": "ace-sample-1.pdf",
+    "number": 11
+  },
+  {
+    "question": "Your company's security vulnerability management policy wonts 3 member of the security team to have visibility into vulnerabilities and other OS metadata for a\nspecific Compute Engine instance This Compute Engine instance hosts a critical application in your Goggle Cloud project. You need to implement your company's\nsecurity vulnerability management policy. What should you dc?\nGuaranteed success with Our exam guides visit - https://www.certshared.com\nCertshared now are offering 100% pass ensure Associate-Cloud-Engineer dumps!\nhttps://www.certshared.com/exam/Associate-Cloud-Engineer/ (244 Q&As)A. • Ensure that the Ops Agent Is Installed on the Compute Engine instance.• Create a custom metric in the Cloud Monitoring dashboard.• Provide the security\nteam member with access to this dashboard.\nB. • Ensure that the Ops Agent is installed on tie Compute Engine instance.• Provide the security team member roles/configure.inventoryViewer permission.\nC. • Ensure that the OS Config agent Is Installed on the Compute Engine instance.• Provide the security team member roles/configure.vulnerabilityViewer\npermission.\nD. • Ensure that the OS Config agent is installed on the Compute Engine instance• Create a log sink Co a BigQuery dataset.• Provide the security team member\nwith access to this dataset.\nAnswer: C\nNEW QUESTION 20\nYou deployed an App Engine application using gcloud app deploy, but it did not deploy to the intended project. You want to find out why this happened and where\nthe application deployed. What should you do?",
+    "options": {
+      "A": "Check the app.yaml file for your application and check project settings.",
+      "B": "Check the web-application.xml file for your application and check project settings.",
+      "C": "Go to Deployment Manager and review settings for deployment of applications.",
+      "D": "Go to Cloud Shell and run gcloud config list to review the Google Cloud configuration used for deployment."
+    },
+    "answer": "D",
+    "explanation": "C:\\GCP\\appeng>gcloud config list [core]\naccount = xxx@gmail.com disable_usage_reporting = False\nproject = my-first-demo-xxxx https://cloud.google.com/endpoints/docs/openapi/troubleshoot-gce-deployment",
+    "source": "ace-sample-1.pdf",
+    "number": 12
+  },
+  {
+    "question": "Your company is moving from an on-premises environment to Google Cloud Platform (GCP). You have multiple development teams that use Cassandra\nenvironments as backend databases. They all need a development environment that is isolated from other Cassandra instances. You want to move to GCP quickly\nand with minimal support effort. What should you do?",
+    "options": {
+      "A": "* 1. Build an instruction guide to install Cassandra on GCP.* 2. Make the instruction guide accessible to your developers.",
+      "B": "* 1. Advise your developers to go to Cloud Marketplace.* 2. Ask the developers to launch a Cassandra image for their development work.",
+      "C": "* 1. Build a Cassandra Compute Engine instance and take a snapshot of it.* 2. Use the snapshot to create instances for your developers.",
+      "D": "* 1. Build a Cassandra Compute Engine instance and take a snapshot of it.* 2. Upload the snapshot to Cloud Storage and make it accessible to your"
+    },
+    "answer": "B",
+    "explanation": "https://medium.com/google-cloud/how-to-deploy-cassandra-and-connect-on-google-cloud-platform-with-a-few-\nhttps://cloud.google.com/blog/products/databases/open-source-cassandra-now-managed-on-google-cloud https://cloud.google.com/marketplace\nYou can deploy Cassandra as a Service, called Astra, on the Google Cloud Marketplace. Not only do you get a unified bill for all GCP services, your Developers\ncan now create Cassandra clusters on Google Cloud in minutes and build applications with Cassandra as a database as a service without the operational\noverhead of managing Cassandra",
+    "source": "ace-sample-1.pdf",
+    "number": 13
+  },
+  {
+    "question": "Your application is running on Google Cloud in a managed instance group (MIG). You see errors in Cloud Logging for one VM that one of the processes is not\nresponsive. You want to replace this VM in the MIG quickly. What should you do?",
+    "options": {
+      "A": "Select the MIG from the Compute Engine console and, in the menu, select Replace VMs.",
+      "B": "Use the gcloud compute instance-groups managed recreate-instances command to recreate theVM.",
+      "C": "Use the gcloud compute instances update command with a REFRESH action for the VM.",
+      "D": "Update and apply the instance template of the MIG."
+    },
+    "answer": "A",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 14
+  },
+  {
+    "question": "You need to manage a third-party application that will run on a Compute Engine instance. Other Compute Engine instances are already running with default\nconfiguration. Application installation files are hosted on Cloud Storage. You need to access these files from the new instance without allowing other virtual\nmachines (VMs) to access these files. What should you do?",
+    "options": {
+      "A": "Create the instance with the default Compute Engine service account Grant the service account permissions on Cloud Storage.",
+      "B": "Create the instance with the default Compute Engine service account Add metadata to the objects on Cloud Storage that matches the metadata on the new",
+      "C": "Create a new service account and assig n this service account to the new instance Grant the service account permissions on Cloud Storage.",
+      "D": "Create a new service account and assign this service account to the new instance Add metadata to the objects on Cloud Storage that matches the metadata on"
+    },
+    "answer": "B",
+    "explanation": "https://cloud.google.com/iam/docs/best-practices-for-using-and-managing-service-accounts\nIf an application uses third-party or custom identities and needs to access a resource, such as a BigQuery dataset or a Cloud Storage bucket, it must perform a\ntransition between principals. Because Google Cloud APIs don't recognize third-party or custom identities, the application can't propagate the end-user's identity to\nBigQuery or Cloud Storage. Instead, the application has to perform the access by using a different Google identity.",
+    "source": "ace-sample-1.pdf",
+    "number": 15
+  },
+  {
+    "question": "Guaranteed success with Our exam guides visit - https://www.certshared.com\nCertshared now are offering 100% pass ensure Associate-Cloud-Engineer dumps!\nhttps://www.certshared.com/exam/Associate-Cloud-Engineer/ (244 Q&As)You are building a data lake on Google Cloud for your Internet of Things (loT) application. The loT application has millions of sensors that are constantly streaming\nstructured and unstructured data to your backend in the cloud. You want to build a highly available and resilient architecture based on\nGoogle-recommended practices. What should you do?",
+    "options": {
+      "A": "Stream data to Pub/Sub, and use Dataflow to send data to Cloud Storage",
+      "B": "Stream data to Pub/Su",
+      "C": "and use Storage Transfer Service to send data to BigQuery.",
+      "D": "Stream data to Dataflow, and use Storage Transfer Service to send data to BigQuery."
+    },
+    "answer": "B",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 16
+  },
+  {
+    "question": "You deployed an LDAP server on Compute Engine that is reachable via TLS through port 636 using UDP. You want to make sure it is reachable by clients over\nthat port. What should you do?",
+    "options": {
+      "A": "Add the network tag allow-udp-636 to the VM instance running the LDAP server.",
+      "B": "Create a route called allow-udp-636 and set the next hop to be the VM instance running the LDAP server.",
+      "C": "Add a network tag of your choice to the instanc",
+      "D": "Create a firewall rule to allow ingress on UDP port 636 for that network tag."
+    },
+    "answer": "C",
+    "explanation": "A tag is simply a character string added to a tags field in a resource, such as Compute Engine virtual machine (VM) instances or instance templates. A tag is not a\nseparate resource, so you cannot create it separately. All resources with that string are considered to have that tag. Tags enable you to make firewall rules and\nroutes applicable to specific VM instances.",
+    "source": "ace-sample-1.pdf",
+    "number": 17
+  },
+  {
+    "question": "You have a Compute Engine instance hosting a production application. You want to receive an email if the instance consumes more than 90% of its CPU\nresources for more than 15 minutes. You want to use Google services. What should you do?",
+    "options": {
+      "A": "* 1. Create a consumer Gmail account.* 2. Write a script that monitors the CPU usage.* 3. When the CPU usage exceeds the threshold, have that script send",
+      "B": "* 1. Create a Stackdriver Workspace, and associate your Google Cloud Platform (GCP) project with it.* 2.Create an Alerting Policy in Stackdriver that uses the",
+      "C": "3.Configure your email address in the notification channel.",
+      "D": "* 1. Create a Stackdriver Workspace, and associate your GCP project with it.* 2. Write a script that monitors the CPU usage and sends it as a custom metric to"
+    },
+    "answer": "B",
+    "explanation": "Specifying conditions for alerting policies This page describes how to specify conditions for alerting policies. The conditions for an alerting policy define what is\nmonitored and when to trigger an alert. For example, suppose you want to define an alerting policy that emails you if the CPU utilization of a Compute Engine VM\ninstance is above 80% for more than 3 minutes. You use the conditions dialog to specify that you want to monitor the CPU utilization of a Compute Engine VM\ninstance, and that you want an alerting policy to trigger when that utilization is above 80% for 3 minutes. https://cloud.google.com/monitoring/alerts/ui-conditions-ga\nhttps://cloud.google.com/monitoring/alerts/using-alerting-ui https://cloud.google.com/monitoring/support/notification-options",
+    "source": "ace-sample-1.pdf",
+    "number": 18
+  },
+  {
+    "question": "You built an application on Google Cloud Platform that uses Cloud Spanner. Your support team needs to monitor the environment but should not have access to\ntable data. You need a streamlined solution to grant the correct permissions to your support team, and you want to follow Google-recommended practices. What\nshould you do?",
+    "options": {
+      "A": "Add the support team group to the roles/monitoring.viewer role",
+      "B": "Add the support team group to the roles/spanner.databaseUser role.",
+      "C": "Add the support team group to the roles/spanner.databaseReader role.",
+      "D": "Add the support team group to the roles/stackdriver.accounts.viewer role."
+    },
+    "answer": "A",
+    "explanation": "roles/monitoring.viewer provides read-only access to get and list information about all monitoring data and configurations. This role provides monitoring access\nand fits our requirements. roles/monitoring.viewer. is the right answer.\nRef: https://cloud.google.com/iam/docs/understanding-roles#cloud-spanner-roles",
+    "source": "ace-sample-1.pdf",
+    "number": 19
+  },
+  {
+    "question": "You have a workload running on Compute Engine that is critical to your business. You want to ensure that the data on the boot disk of this workload is backed up\nregularly. You need to be able to restore a backup as quickly as possible in case of disaster. You also want older backups to be cleaned automatically to save on\ncost. You want to follow Google-recommended practices. What should you do?",
+    "options": {
+      "A": "Create a Cloud Function to create an instance template.",
+      "B": "Create a snapshot schedule for the disk using the desired interval.",
+      "C": "Create a cron job to create a new disk from the disk using gcloud.",
+      "D": "Create a Cloud Task to create an image and export it to Cloud Storage."
+    },
+    "answer": "B",
+    "explanation": "Best practices for persistent disk snapshots\nYou can create persistent disk snapshots at any time, but you can create snapshots more quickly and with greater reliability if you use the following best practices.\nCreating frequent snapshots efficiently\nUse snapshots to manage your data efficiently.\nCreate a snapshot of your data on a regular schedule to minimize data loss due to unexpected failure. Improve performance by eliminating excessive snapshot\ndownloads and by creating an image and reusing it. Set your snapshot schedule to off-peak hours to reduce snapshot time.\nSnapshot frequency limits\nCreating snapshots from persistent disks\nYou can snapshot your disks at most once every 10 minutes. If you want to issue a burst of requests to snapshot your disks, you can issue at most 6 requests in\n60 minutes.\nIf the limit is exceeded, the operation fails and returns the following error: https://cloud.google.com/compute/docs/disks/snapshot-best-practices",
+    "source": "ace-sample-1.pdf",
+    "number": 20
+  },
+  {
+    "question": "Your development team needs a new Jenkins server for their project. You need to deploy the server using the fewest steps possible. What should you do?",
+    "options": {
+      "A": "Download and deploy the Jenkins Java WAR to App Engine Standard.",
+      "B": "Create a new Compute Engine instance and install Jenkins through the command line interface.",
+      "C": "Create a Kubernetes cluster on Compute Engine and create a deployment with the Jenkins Docker image.",
+      "D": "Use GCP Marketplace to launch the Jenkins solution."
+    },
+    "answer": "D",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 21
+  },
+  {
+    "question": "A company wants to build an application that stores images in a Cloud Storage bucket and wants to generate thumbnails as well as resize the images. They want\nto use a google managed service that can scale up and scale down to zero automatically with minimal effort. You have been asked to recommend a service.\nWhich GCP service would you suggest?",
+    "options": {
+      "A": "Google Compute Engine",
+      "B": "Google App Engine",
+      "C": "Cloud Functions",
+      "D": "Google Kubernetes Engine"
+    },
+    "answer": "C",
+    "explanation": "Text Description automatically generated with low confidence\nCloud Functions is Google Cloud’s event-driven serverless compute platform. It automatically scales based on the load and requires no additional configuration.\nYou pay only for the resources used.\nRef: https://cloud.google.com/functions\nWhile all other options i.e. Google Compute Engine, Google Kubernetes Engine, Google App Engine support autoscaling, it needs to be configured explicitly based\non the load and is not as trivial as the scale up or scale down offered by Google’s cloud functions.",
+    "source": "ace-sample-1.pdf",
+    "number": 22
+  },
+  {
+    "question": "You have a web application deployed as a managed instance group. You have a new version of the application to gradually deploy. Your web application is\ncurrently receiving live web traffic. You want to ensure that the available capacity does not decrease during the deployment. What should you do?",
+    "options": {
+      "A": "Perform a rolling-action start-update with maxSurge set to 0 and maxUnavailable set to 1.",
+      "B": "Perform a rolling-action start-update with maxSurge set to 1 and maxUnavailable set to 0.",
+      "C": "Create a new managed instance group with an updated instance templat",
+      "D": "Add the group to the backend service for the load balance"
+    },
+    "answer": "B",
+    "explanation": "https://cloud.google.com/compute/docs/instance-groups/rolling-out-updates-to-managed-instance-groups#max_",
+    "source": "ace-sample-1.pdf",
+    "number": 23
+  },
+  {
+    "question": "You installed the Google Cloud CLI on your workstation and set the proxy configuration. However, you are worried that your proxy credentials will be recorded in\nGuaranteed success with Our exam guides visit - https://www.certshared.com\nCertshared now are offering 100% pass ensure Associate-Cloud-Engineer dumps!\nhttps://www.certshared.com/exam/Associate-Cloud-Engineer/ (244 Q&As)the gcloud CLI logs. You want to prevent your proxy credentials from being logged What should you do?",
+    "options": {
+      "A": "Configure username and password by using gcloud configure set proxy/username and gcloud configure set proxy/ proxy/password commands.",
+      "B": "Encode username and password in sha256 encoding, and save it to a text fil",
+      "C": "Use filename as a value in the gcloud configure set core/custom_ca_certs_file command.",
+      "D": "Provide values for CLOUDSDK_USERNAME and CLOUDSDK_PASSWORD in the gcloud CLI tool configure file."
+    },
+    "answer": "D",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 24
+  },
+  {
+    "question": "You are the project owner of a GCP project and want to delegate control to colleagues to manage buckets and files in Cloud Storage. You want to follow Google-\nrecommended practices. Which IAM roles should you grant your colleagues?",
+    "options": {
+      "A": "Project Editor",
+      "B": "Storage Admin",
+      "C": "Storage Object Admin",
+      "D": "Storage Object Creator"
+    },
+    "answer": "B",
+    "explanation": "Storage Admin (roles/storage.admin) Grants full control of buckets and objects.\nWhen applied to an individual bucket, control applies only to the specified bucket and objects within the bucket.\nfirebase.projects.get resourcemanager.projects.get\nresourcemanager.projects.list storage.buckets.* storage.objects.*\nhttps://cloud.google.com/storage/docs/access-control/iam-roles\nThis role grants full control of buckets and objects. When applied to an individual bucket, control applies only to the specified bucket and objects within the bucket.\nRef: https://cloud.google.com/iam/docs/understanding-roles#storage-roles",
+    "source": "ace-sample-1.pdf",
+    "number": 25
+  },
+  {
+    "question": "The sales team has a project named Sales Data Digest that has the ID acme-data-digest You need to set up similar Google Cloud resources for the marketing\nteam but their resources must be organized independently of the sales team. What should you do?",
+    "options": {
+      "A": "Grant the Project Editor role to the Marketing learn for acme data digest",
+      "B": "Create a Project Lien on acme-data digest and then grant the Project Editor role to the Marketing team",
+      "C": "Create another protect with the ID acme-marketing-data-digest for the Marketing team and deploy the resources there",
+      "D": "Create a new protect named Meeting Data Digest and use the ID acme-data-digest Grant the Project Editor role to the Marketing team."
+    },
+    "answer": "C",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 26
+  },
+  {
+    "question": "Your company has workloads running on Compute Engine and on-premises. The Google Cloud Virtual Private Cloud (VPC) is connected to your WAN over a\nVirtual Private Network (VPN). You need to deploy a new Compute Engine instance and ensure that no public Internet traffic can be routed to it. What should you\ndo?",
+    "options": {
+      "A": "Create the instance without a public IP address.",
+      "B": "Create the instance with Private Google Access enabled.",
+      "C": "Create a deny-all egress firewall rule on the VPC network.",
+      "D": "Create a route on the VPC to route all traffic to the instance over the VPN tunnel."
+    },
+    "answer": "A",
+    "explanation": "VMs cannot communicate over the internet without a public IP address. Private Google Access permits access to Google APIs and services in Google's production\ninfrastructure.\nhttps://cloud.google.com/vpc/docs/private-google-access",
+    "source": "ace-sample-1.pdf",
+    "number": 27
+  },
+  {
+    "question": "Your projects incurred more costs than you expected last month. Your research reveals that a development\nGKE container emitted a huge number of logs, which resulted in higher costs. You want to disable the logs quickly using the minimum number of steps. What\nshould you do?",
+    "options": {
+      "A": "1. Go to the Logs ingestion window in Stackdriver Logging, and disable the log source for the GKE container resource.",
+      "B": "1. Go to the Logs ingestion window in Stackdriver Logging, and disable the log source for the GKE Cluster Operations resource.",
+      "C": "1. Go to the GKE console, and delete existing clusters.2. Recreate a new cluster.3. Clear the option to enable legacy Stackdriver Logging.",
+      "D": "1. Go to the GKE console, and delete existing clusters.2. Recreate a new cluster.3. Clear the option to enable legacy Stackdriver Monitoring."
+    },
+    "answer": "A",
+    "explanation": "https://cloud.google.com/logging/docs/api/v2/resource-list GKE Containers have more log than GKE Cluster Operations:\n-GKE Containe:\ncluster_name: An immutable name for the cluster the container is running in. namespace_id: Immutable ID of the cluster namespace the container is running in.\ninstance_id: Immutable ID of the GCE instance the container is running in. pod_id: Immutable ID of the pod the container is running in.\ncontainer_name: Immutable name of the container. zone: The GCE zone in which the instance is running. VS -GKE Cluster Operations\nproject_id: The identifier of the GCP project associated with this resource, such as \"my-project\". cluster_name: The name of the GKE Cluster.\nlocation: The location in which the GKE Cluster is running.\nGuaranteed success with Our exam guides visit - https://www.certshared.com\nCertshared now are offering 100% pass ensure Associate-Cloud-Engineer dumps!\nhttps://www.certshared.com/exam/Associate-Cloud-Engineer/ (244 Q&As)NEW QUESTION 73\nYou are using Google Kubernetes Engine with autoscaling enabled to host a new application. You want to expose this new application to the public, using HTTPS\non a public IP address. What should you do?\nA. Create a Kubernetes Service of type NodePort for your application, and a Kubernetes Ingress to expose this Service via a Cloud Load Balancer.\nB. Create a Kubernetes Service of type ClusterIP for your applicatio\nC. Configure the public DNS name of your application using the IP of this Service.\nD. Create a Kubernetes Service of type NodePort to expose the application on port 443 of each node of the Kubernetes cluste\nE. Configure the public DNS name of your application with the IP of every node of the cluster to achieve load-balancing.\nF. Create a HAProxy pod in the cluster to load-balance the traffic to all the pods of the application.Forward the public traffic to HAProxy with an iptable rul\nG. Configure the DNS name of your application using the public IP of the node HAProxy is running on.\nAnswer: A",
+    "source": "ace-sample-1.pdf",
+    "number": 28
+  },
+  {
+    "question": "You are running multiple VPC-native Google Kubernetes Engine clusters in the same subnet. The IPs available for the nodes are exhausted, and you want to\nensure that the clusters can grow in nodes when needed. What should you do?",
+    "options": {
+      "A": "Create a new subnet in the same region as the subnet being used.",
+      "B": "Add an alias IP range to the subnet used by the GKE clusters.",
+      "C": "Create a new VPC, and set up VPC peering with the existing VPC.",
+      "D": "Expand the CIDR range of the relevant subnet for the cluster."
+    },
+    "answer": "D",
+    "explanation": "gcloud compute networks subnets expand-ip-range NAME gcloud compute networks subnets expand-ip-range\n- expand the IP range of a Compute Engine subnetwork https://cloud.google.com/sdk/gcloud/reference/compute/networks/subnets/expand-ip-range",
+    "source": "ace-sample-1.pdf",
+    "number": 29
+  },
+  {
+    "question": "You need to create a Compute Engine instance in a new project that doesn’t exist yet. What should you do?",
+    "options": {
+      "A": "Using the Cloud SDK, create a new project, enable the Compute Engine API in that project, and then create the instance specifying your new project.",
+      "B": "Enable the Compute Engine API in the Cloud Console, use the Cloud SDK to create the instance, and then use the ––project flag to specify a new project.",
+      "C": "Using the Cloud SDK, create the new instance, and use the ––project flag to specify the new project.Answer yes when prompted by Cloud SDK to enable the",
+      "D": "Enable the Compute Engine API in the Cloud Consol"
+    },
+    "answer": "A",
+    "explanation": "https://cloud.google.com/sdk/gcloud/reference/projects/create Quickstart: Creating a New Instance Using the Command Line Before you begin\n* 1. In the Cloud Console, on the project selector page, select or create a Cloud project.\n* 2. Make sure that billing is enabled for your Google Cloud project. Learn how to confirm billing is enabled for your project.\nTo use the gcloud command-line tool for this quickstart, you must first install and initialize the Cloud SDK:\n* 1. Download and install the Cloud SDK using the instructions given on Installing Google Cloud SDK.\n* 2. Initialize the SDK using the instructions given on Initializing Cloud SDK.\nTo use gcloud in Cloud Shell for this quickstart, first activate Cloud Shell using the instructions given on Starting Cloud Shell.\nhttps://cloud.google.com/ai-platform/deep-learning-vm/docs/quickstart-cli#before-you-begin",
+    "source": "ace-sample-1.pdf",
+    "number": 30
+  },
+  {
+    "question": "Your team is running an on-premises ecommerce application. The application contains a complex set of microservices written in Python, and each microservice is\nrunning on Docker containers. Configurations are injected by using environment variables. You need to deploy your current application to a serverless Google\nCloud cloud solution. What should you do?",
+    "options": {
+      "A": "Use your existing CI/CD pipeline Use the generated Docker images and deploy them to Cloud Run.Update the configurations and the required endpoints.",
+      "B": "Use your existing continuous integration and delivery (CI/CD) pipelin",
+      "C": "Use the generated Docker images and deploy them to Cloud Functio",
+      "D": "Use the same configuration as on-premises."
+    },
+    "answer": "A",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 31
+  },
+  {
+    "question": "You have a single binary application that you want to run on Google Cloud Platform. You decided to automatically scale the application based on underlying\ninfrastructure CPU usage. Your organizational policies require you to use virtual machines directly. You need to ensure that the application scaling is operationally\nefficient and completed as quickly as possible. What should you do?",
+    "options": {
+      "A": "Create a Google Kubernetes Engine cluster, and use horizontal pod autoscaling to scale the application.",
+      "B": "Create an instance template, and use the template in a managed instance group with autoscaling configured.",
+      "C": "Create an instance template, and use the template in a managed instance group that scales up and down based on the time of day.",
+      "D": "Use a set of third-party tools to build automation around scaling the application up and down, based on Stackdriver CPU usage monitoring."
+    },
+    "answer": "B",
+    "explanation": "Managed instance groups offer autoscaling capabilities that let you automatically add or delete instances from a managed instance group based on increases or\nGuaranteed success with Our exam guides visit - https://www.certshared.com\nCertshared now are offering 100% pass ensure Associate-Cloud-Engineer dumps!\nhttps://www.certshared.com/exam/Associate-Cloud-Engineer/ (244 Q&As)decreases in load (CPU Utilization in this case). Autoscaling helps your apps gracefully handle increases in traffic and reduce costs when the need for resources is\nlower. You define the autoscaling policy and the autoscaler performs automatic scaling based on the measured load (CPU Utilization in this case). Autoscaling\nworks by adding more instances to your instance group when there is more load (upscaling), and deleting instances when the need for instances is lowered\n(downscaling). Ref: https://cloud.google.com/compute/docs/autoscaler",
+    "source": "ace-sample-1.pdf",
+    "number": 32
+  },
+  {
+    "question": "You are setting up a Windows VM on Compute Engine and want to make sure you can log in to the VM via RDP. What should you do?",
+    "options": {
+      "A": "After the VM has been created, use your Google Account credentials to log in into the VM.",
+      "B": "After the VM has been created, use gcloud compute reset-windows-password to retrieve the login credentials for the VM.",
+      "C": "When creating the VM, add metadata to the instance using ‘windows-password’ as the key and a password as the value.",
+      "D": "After the VM has been created, download the JSON private key for the default Compute Engine service accoun"
+    },
+    "answer": "B",
+    "explanation": "You can generate Windows passwords using either the Google Cloud Console or the gcloud command-line tool. This option uses the right syntax to reset the\nwindows password.\ngcloud compute reset-windows-password windows-instance\nRef: https://cloud.google.com/compute/docs/instances/windows/creating-passwords-for-windows-instances#gc",
+    "source": "ace-sample-1.pdf",
+    "number": 33
+  },
+  {
+    "question": "You are building an application that processes data files uploaded from thousands of suppliers. Your primary goals for the application are data security and the\nexpiration of aged data. You need to design the application to:\n•Restrict access so that suppliers can access only their own data.\n•Give suppliers write access to data only for 30 minutes.\n•Delete data that is over 45 days old.\nYou have a very short development cycle, and you need to make sure that the application requires minimal maintenance. Which two strategies should you use?\n(Choose two.)",
+    "options": {
+      "A": "Build a lifecycle policy to delete Cloud Storage objects after 45 days.",
+      "B": "Use signed URLs to allow suppliers limited time access to store their objects.",
+      "C": "Set up an SFTP server for your application, and create a separate user for each supplier.",
+      "D": "Build a Cloud function that triggers a timer of 45 days to delete objects that have expired."
+    },
+    "answer": "AB",
+    "explanation": "(A) Object Lifecycle Management Delete\nThe Delete action deletes an object when the object meets all conditions specified in the lifecycle rule.\nException: In buckets with Object Versioning enabled, deleting the live version of an object causes it to become a noncurrent version, while deleting a noncurrent\nversion deletes that version permanently.\nhttps://cloud.google.com/storage/docs/lifecycle#delete\n(B) Signed URLs\nThis page provides an overview of signed URLs, which you use to give time-limited resource access to anyone in possession of the URL, regardless of whether\nthey have a Google account\nhttps://cloud.google.com/storage/docs/access-control/signed-urls",
+    "source": "ace-sample-1.pdf",
+    "number": 34
+  },
+  {
+    "question": "You have an application that runs on Compute Engine VM instances in a custom Virtual Private Cloud (VPC). Your company's security policies only allow the use\nto internal IP addresses on VM instances and do not let VM instances connect to the internet. You need to ensure that the application can access a file hosted in a\nCloud Storage bucket within your project. What should you do?",
+    "options": {
+      "A": "Enable Private Service Access on the Cloud Storage Bucket.",
+      "B": "Add slorage.googleapis.com to the list of restricted services in a VPC Service Controls perimeter and add your project to the list to protected projects.",
+      "C": "Enable Private Google Access on the subnet within the custom VPC.",
+      "D": "Deploy a Cloud NAT instance and route the traffic to the dedicated IP address of the Cloud Storage bucket."
+    },
+    "answer": "A",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 35
+  },
+  {
+    "question": "You are assigned to maintain a Google Kubernetes Engine (GKE) cluster named dev that was deployed on Google Cloud. You want to manage the GKE\nconfiguration using the command line interface (CLI). You have just downloaded and installed the Cloud SDK. You want to ensure that future CLI commands by\ndefault address this specific cluster. What should you do?",
+    "options": {
+      "A": "Use the command gcloud config set container/cluster dev.",
+      "B": "Use the command gcloud container clusters update dev.",
+      "C": "Create a file called gke.default in the ~/.gcloud folder that contains the cluster name.",
+      "D": "Create a file called defaults.json in the ~/.gcloud folder that contains the cluster name."
+    },
+    "answer": "A",
+    "explanation": "To set a default cluster for gcloud commands, run the following command: gcloud config set container/cluster CLUSTER_NAME\nhttps://cloud.google.com/kubernetes-engine/docs/how-to/managing-clusters?hl=en\nGuaranteed success with Our exam guides visit - https://www.certshared.com\nCertshared now are offering 100% pass ensure Associate-Cloud-Engineer dumps!\nhttps://www.certshared.com/exam/Associate-Cloud-Engineer/ (244 Q&As)NEW QUESTION 105\nYou need to create a new billing account and then link it with an existing Google Cloud Platform project. What should you do?\nA. Verify that you are Project Billing Manager for the GCP projec\nB. Update the existing project to link it to the existing billing account.\nC. Verify that you are Project Billing Manager for the GCP projec\nD. Create a new billing account and link the new billing account to the existing project.\nE. Verify that you are Billing Administrator for the billing accoun\nF. Create a new project and link the new project to the existing billing account.\nG. Verify that you are Billing Administrator for the billing accoun\nH. Update the existing project to link it to the existing billing account.\nAnswer: B\nExplanation: \nBilling Administrators can not create a new billing account, and the project is presumably already created. Project Billing Manager allows you to link the created\nbilling account to the project. It is vague on how the billing account gets created but by process of elimination",
+    "source": "ace-sample-1.pdf",
+    "number": 36
+  },
+  {
+    "question": "You have an application that looks for its licensing server on the IP 10.0.3.21. You need to deploy the licensing server on Compute Engine. You do not want to\nchange the configuration of the application and want the application to be able to reach the licensing server. What should you do?",
+    "options": {
+      "A": "Reserve the IP 10.0.3.21 as a static internal IP address using gcloud and assign it to the licensing server.",
+      "B": "Reserve the IP 10.0.3.21 as a static public IP address using gcloud and assign it to the licensing server.",
+      "C": "Use the IP 10.0.3.21 as a custom ephemeral IP address and assign it to the licensing server.",
+      "D": "Start the licensing server with an automatic ephemeral IP address, and then promote it to a static internal IP address."
+    },
+    "answer": "A",
+    "explanation": "IP 10.0.3.21 is internal by default, and to ensure that it will be static non-changing it should be selected as static internal ip address.",
+    "source": "ace-sample-1.pdf",
+    "number": 37
+  },
+  {
+    "question": "Your company developed an application to deploy on Google Kubernetes Engine. Certain parts of the\napplication are not fault-tolerant and are allowed to have downtime Other parts of the application are critical and must always be available. You need to configure a\nGoorj e Kubernfl:es Engine duster while optimizing for cost. What should you do?",
+    "options": {
+      "A": "Create a cluster with a single node-pool by using standard VM",
+      "B": "Label the fault-tolerant Deployments as spot-true.",
+      "C": "Create a cluster with a single node-pool by using Spot VM",
+      "D": "Label the critical Deployments as spot-false."
+    },
+    "answer": "C",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 38
+  },
+  {
+    "question": "Your company has a 3-tier solution running on Compute Engine. The configuration of the current infrastructure is shown below.\nGuaranteed success with Our exam guides visit - https://www.certshared.com\nCertshared now are offering 100% pass ensure Associate-Cloud-Engineer dumps!\nhttps://www.certshared.com/exam/Associate-Cloud-Engineer/ (244 Q&As)\nEach tier has a service account that is associated with all instances within it. You need to enable communication on TCP port 8080 between tiers as follows:\n• Instances in tier #1 must communicate with tier #2.\n• Instances in tier #2 must communicate with tier #3.\nWhat should you do?",
+    "options": {
+      "A": "1. Create an ingress firewall rule with the following settings:• Targets: all instances• Source filter: IP ranges (with the range set to 10.0.2.0/24)• Protocols: allow",
+      "B": "1. Create an ingress firewall rule with the following settings:• Targets: all instances with tier #2 service account• Source filter: all instances with tier #1 service",
+      "C": "1. Create an ingress firewall rule with the following settings:• Targets: all instances with tier #2 service account• Source filter: all instances with tier #1 service",
+      "D": "1. Create an egress firewall rule with the following settings:• Targets: all instances• Source filter: IP ranges (with the range set to 10.0.2.0/24)• Protocols: allow"
+    },
+    "answer": "B",
+    "explanation": "* 1. Create an ingress firewall rule with the following settings: \"¢ Targets: all instances with tier #2 service account \"¢ Source filter: all instances with tier #1 service\naccount \"¢ Protocols: allow TCP:8080 2. Create an ingress firewall rule with the following settings: \"¢ Targets: all instances with tier #3 service account \"¢ Source\nfilter: all instances with tier #2 service account \"¢ Protocols: allow TCP: 8080",
+    "source": "ace-sample-1.pdf",
+    "number": 39
+  },
+  {
+    "question": "You need to configure optimal data storage for files stored in Cloud Storage for minimal cost. The files are used in a mission-critical analytics pipeline that is used\ncontinually. The users are in Boston, MA (United States). What should you do?",
+    "options": {
+      "A": "Configure regional storage for the region closest to the users Configure a Nearline storage class",
+      "B": "Configure regional storage for the region closest to the users Configure a Standard storage class",
+      "C": "Configure dual-regional storage for the dual region closest to the users Configure a Nearline storage class",
+      "D": "Configure dual-regional storage for the dual region closest to the users Configure a Standard storage class"
+    },
+    "answer": "B",
+    "explanation": "Keywords: - continually -> Standard - mission-critical analytics -> dual-regional",
+    "source": "ace-sample-1.pdf",
+    "number": 40
+  },
+  {
+    "question": "You want to configure an SSH connection to a single Compute Engine instance for users in the dev1 group. This instance is the only resource in this particular\nGoogle Cloud Platform project that the dev1 users should be able to connect to. What should you do?",
+    "options": {
+      "A": "Set metadata to enable-oslogin=true for the instanc",
+      "B": "Grant the dev1 group the compute.osLogin role.Direct them to use the Cloud Shell to ssh to that instance.",
+      "C": "Set metadata to enable-oslogin=true for the instanc",
+      "D": "Set the service account to no service account for that instanc"
+    },
+    "answer": "A",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 41
+  },
+  {
+    "question": "You are building an archival solution for your data warehouse and have selected Cloud Storage to archive your data. Your users need to be able to access this\narchived data once a quarter for some regulatory requirements. You want to select a cost-efficient option. Which storage option should you use?",
+    "options": {
+      "A": "Coldline Storage",
+      "B": "Nearline Storage",
+      "C": "Regional Storage",
+      "D": "Multi-Regional Storage"
+    },
+    "answer": "A",
+    "explanation": "Coldline Storage is a very-low-cost, highly durable storage service for storing infrequently accessed data. Coldline Storage is ideal for data you plan to read or\nmodify at most once a quarter. Since we have a requirement to access data once a quarter and want to go with the most cost-efficient option, we should select\nColdline Storage.\nRef: https://cloud.google.com/storage/docs/storage-classes#coldline",
+    "source": "ace-sample-1.pdf",
+    "number": 42
+  },
+  {
+    "question": "You have been asked to set up Object Lifecycle Management for objects stored in storage buckets. The objects are written once and accessed frequently for 30\ndays. After 30 days, the objects are not read again unless there is a special need. The object should be kept for three years, and you need to minimize cost. What\nshould you do?",
+    "options": {
+      "A": "Set up a policy that uses Nearline storage for 30 days and then moves to Archive storage for three years.",
+      "B": "Set up a policy that uses Standard storage for 30 days and then moves to Archive storage for three years.",
+      "C": "Set up a policy that uses Nearline storage for 30 days, then moves the Coldline for one year, and then moves to Archive storage for two years.",
+      "D": "Set up a policy that uses Standard storage for 30 days, then moves to Coldline for one year, and then moves to Archive storage for two years."
+    },
+    "answer": "B",
+    "explanation": "Guaranteed success with Our exam guides visit - https://www.certshared.com\nCertshared now are offering 100% pass ensure Associate-Cloud-Engineer dumps!\nhttps://www.certshared.com/exam/Associate-Cloud-Engineer/ (244 Q&As)The key to understand the requirement is : \"The objects are written once and accessed frequently for 30 days\" Standard Storage\nStandard Storage is best for data that is frequently accessed (\"hot\" data) and/or stored for only brief periods of time.\nArchive Storage\nArchive Storage is the lowest-cost, highly durable storage service for data archiving, online backup, and disaster recovery. Unlike the \"coldest\" storage services\noffered by other Cloud providers, your data is available within milliseconds, not hours or days. Archive Storage is the best choice for data that you plan to access\nless than once a year.\nhttps://cloud.google.com/storage/docs/storage-classes#standard",
+    "source": "ace-sample-1.pdf",
+    "number": 43
+  },
+  {
+    "question": "You created a Kubernetes deployment by running kubectl run nginx image=nginx labels=app=prod. Your Kubernetes cluster is also used by a number of other\ndeployments. How can you find the identifier of the pods for this nginx deployment?",
+    "options": {
+      "A": "kubectl get deployments –output=pods",
+      "B": "gcloud get pods –selector=”app=prod”",
+      "C": "kubectl get pods -I “app=prod”",
+      "D": "gcloud list gke-deployments -filter={pod }"
+    },
+    "answer": "C",
+    "explanation": "This command correctly lists pods that have the label app=prod. When creating the deployment, we used the label app=prod so listing pods that have this label\nretrieve the pods belonging to nginx deployments. You can list pods by using Kubernetes CLI kubectl get pods.\nRef: https://kubernetes.io/docs/tasks/access-application-cluster/list-all-running-container-images/\nRef: https://kubernetes.io/docs/tasks/access-application-cluster/list-all-running-container-images/#list-containe",
+    "source": "ace-sample-1.pdf",
+    "number": 44
+  },
+  {
+    "question": "You recently received a new Google Cloud project with an attached billing account where you will work. You need to create instances, set firewalls, and store data\nin Cloud Storage. You want to follow\nGoogle-recommended practices. What should you do?",
+    "options": {
+      "A": "Use the gcloud CLI services enable cloudresourcemanager.googleapis.com command to enable all resources.",
+      "B": "Use the gcloud services enable compute.googleapis.com command to enable Compute Engine and the gcloud services enable storage-api.googleapis.com",
+      "C": "Open the Google Cloud console and enable all Google Cloud APIs from the API dashboard.",
+      "D": "Open the Google Cloud console and run gcloud init --project <project-id> in a Cloud Shell."
+    },
+    "answer": "B",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 45
+  },
+  {
+    "question": "You are given a project with a single virtual private cloud (VPC) and a single subnetwork in the us-central1 region. There is a Compute Engine instance hosting an\napplication in this subnetwork. You need to deploy a new instance in the same project in the europe-west1 region. This new instance needs access to the\napplication. You want to follow Google-recommended practices. What should you do?",
+    "options": {
+      "A": "1. Create a subnetwork in the same VPC, in europe-west1.2. Create the new instance in the new subnetwork and use the first instance's private address as the",
+      "B": "1. Create a VPC and a subnetwork in europe-west1.2. Expose the application with an internal load balancer.3. Create the new instance in the new subnetwork",
+      "C": "1. Create a subnetwork in the same VPC, in europe-west1.2. Use Cloud VPN to connect the two subnetworks.3. Create the new instance in the new",
+      "D": "1. Create a VPC and a subnetwork in europe-west1.2. Peer the 2 VPCs.3. Create the new instance in the new subnetwork and use the first instance's private"
+    },
+    "answer": "C",
+    "explanation": "Given that the new instance wants to access the application on the existing compute engine instance, these applications seem to be related so they should be\nwithin the same VPC. It is possible to have them in different VPCs and peer the VPCs but this is a lot of additional work and we can simplify this by choosing the\noption below (which is the answer)\n* 1. Create a subnet in the same VPC, in europe-west1.\n* 2. Create the new instance in the new subnet and use the first instance subnets private address as the endpoint. is the right answer.\n We can create another subnet in the same VPC and this subnet is located in europe-west1. We can then spin up a new instance in this subnet. We also have\nto set up a firewall rule to allow communication between the two subnets. All instances in the two subnets with the same VPC can communicate through the\ninternal IP Address\nRef: https://cloud.google.com/vpc",
+    "source": "ace-sample-1.pdf",
+    "number": 46
+  },
+  {
+    "question": "You are managing a project for the Business Intelligence (BI) department in your company. A data pipeline ingests data into BigQuery via streaming. You want the\nusers in the BI department to be able to run the custom SQL queries against the latest data in BigQuery. What should you do?",
+    "options": {
+      "A": "Create a Data Studio dashboard that uses the related BigQuery tables as a source and give the BI team view access to the Data Studio dashboard.",
+      "B": "Create a Service Account for the BI team and distribute a new private key to each member of the BI team.",
+      "C": "Use Cloud Scheduler to schedule a batch Dataflow job to copy the data from BigQuery to the BI team's internal data warehouse.",
+      "D": "Assign the IAM role of BigQuery User to a Google Group that contains the members of the BI team."
+    },
+    "answer": "D",
+    "explanation": "When applied to a dataset, this role provides the ability to read the dataset's metadata and list tables in the dataset. When applied to a project, this role also\nGuaranteed success with Our exam guides visit - https://www.certshared.com\nCertshared now are offering 100% pass ensure Associate-Cloud-Engineer dumps!\nhttps://www.certshared.com/exam/Associate-Cloud-Engineer/ (244 Q&As)provides the ability to run jobs, including queries, within the project. A member with this role can enumerate their own jobs, cancel their own jobs, and enumerate\ndatasets within a project. Additionally, allows the creation of new datasets within the project; the creator is granted the BigQuery Data Owner role\n(roles/bigquery.dataOwner) on these new datasets.\nhttps://cloud.google.com/bigquery/docs/access-control",
+    "source": "ace-sample-1.pdf",
+    "number": 47
+  },
+  {
+    "question": "You just installed the Google Cloud CLI on your new corporate laptop. You need to list the existing instances of your company on Google Cloud. What must you do\nbefore you run the gcloud compute instances list command?\nChoose 2 answers",
+    "options": {
+      "A": "Run gcloud auth login, enter your login credentials in the dialog window, and paste the received login token to gcloud CLI.",
+      "B": "Create a Google Cloud service account, and download the service account ke",
+      "C": "Place the key file in a folder on your machine where gcloud CLI can find it.",
+      "D": "Download your Cloud Identity user account ke"
+    },
+    "answer": "AE",
+    "explanation": "Before you run the gcloud compute instances list command, you need to do two things: authenticate with your user account and set the default project for gcloud\nCLI.\nTo authenticate with your user account, you need to run gcloud auth login, enter your login credentials in the dialog window, and paste the received login token to\ngcloud CLI. This will authorize the gcloud CLI to access Google Cloud resources on your behalf1.\nTo set the default project for gcloud CLI, you need to run gcloud config set project $my_project, where\n$my_project is the ID of the project that contains the instances you want to list. This will save you from having to specify the project flag for every gcloud\ncommand2.\nOption B is not recommended, because using a service account key increases the risk of credential leakage and misuse. It is also not necessary, because you can\nuse your user account to authenticate to the gcloud CLI3. Option C is not correct, because there is no such thing as a Cloud Identity user account key. Cloud\nIdentity is a service that provides identity and access management for Google Cloud users and groups4. Option D is not required, because the gcloud compute\ninstances list command does not depend on the default zone. You can\nlist instances from all zones or filter by a specific zone using the --filter flag.\nReferences:\n 1: https://cloud.google.com/sdk/docs/authorizing\n 2: https://cloud.google.com/sdk/gcloud/reference/config/set\n 3: https://cloud.google.com/iam/docs/best-practices-for-managing-service-account-keys\n 4: https://cloud.google.com/identity/docs/overview\n : https://cloud.google.com/sdk/gcloud/reference/compute/instances/list",
+    "source": "ace-sample-1.pdf",
+    "number": 48
+  },
+  {
+    "question": "You significantly changed a complex Deployment Manager template and want to confirm that the dependencies of all defined resources are properly met before\ncommitting it to the project. You want the most rapid feedback on your changes. What should you do?",
+    "options": {
+      "A": "Use granular logging statements within a Deployment Manager template authored in Python.",
+      "B": "Monitor activity of the Deployment Manager execution on the Stackdriver Logging page of the GCP Console.",
+      "C": "Execute the Deployment Manager template against a separate project with the same configuration, and monitor for failures.",
+      "D": "Execute the Deployment Manager template using the –-preview option in the same project, and observe the state of interdependent resources."
+    },
+    "answer": "D",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 49
+  },
+  {
+    "question": "Your company uses BigQuery for data warehousing. Over time, many different business units in your company have created 1000+ datasets across hundreds of\nprojects. Your CIO wants you to examine all datasets to find tables that contain an employee_ssn column. You want to minimize effort in performing this task.\nWhat should you do?",
+    "options": {
+      "A": "Go to Data Catalog and search for employee_ssn in the search box.",
+      "B": "Write a shell script that uses the bq command line tool to loop through all the projects in your organization.",
+      "C": "Write a script that loops through all the projects in your organization and runs a query on INFORMATION_SCHEMA.COLUMNS view to find the employee_ssn",
+      "D": "Write a Cloud Dataflow job that loops through all the projects in your organization and runs a query on INFORMATION_SCHEMA.COLUMNS view to find"
+    },
+    "answer": "A",
+    "explanation": "https://cloud.google.com/bigquery/docs/quickstarts/quickstart-web-ui?authuser=4",
+    "source": "ace-sample-1.pdf",
+    "number": 50
+  },
+  {
+    "question": "You need to grant access for three users so that they can view and edit table data on a Cloud Spanner instance. What should you do?",
+    "options": {
+      "A": "Run gcloud iam roles describe roles/spanner.databaseUse",
+      "B": "Add the users to the role.",
+      "C": "Run gcloud iam roles describe roles/spanner.databaseUse",
+      "D": "Add the users to a new grou"
+    },
+    "answer": "B",
+    "explanation": "https://cloud.google.com/spanner/docs/iam#spanner.databaseUser\nUsing the gcloud tool, execute the gcloud iam roles describe roles/spanner.databaseUser command on Cloud Shell. Attach the users to a newly created Google\ngroup and add the group to the role.",
+    "source": "ace-sample-1.pdf",
+    "number": 51
+  },
+  {
+    "question": "You are working with a user to set up an application in a new VPC behind a firewall. The user is concerned about data egress. You want to configure the fewest\nopen egress ports. What should you do?",
+    "options": {
+      "A": "Set up a low-priority (65534) rule that blocks all egress and a high-priority rule (1000) that allows only the appropriate ports.",
+      "B": "Set up a high-priority (1000) rule that pairs both ingress and egress ports.",
+      "C": "Set up a high-priority (1000) rule that blocks all egress and a low-priority (65534) rule that allows only the appropriate ports.",
+      "D": "Set up a high-priority (1000) rule to allow the appropriate ports."
+    },
+    "answer": "A",
+    "explanation": "Implied rules Every VPC network has two implied firewall rules. These rules exist, but are not shown in the Cloud Console: Implied allow egress rule. An egress\nrule whose action is allow, destination is 0.0.0.0/0, and priority is the lowest possible (65535) lets any instance send traffic to any destination, except for traffic\nblocked by Google Cloud. A higher priority firewall rule may restrict outbound access. Internet access is allowed if no other firewall rules deny outbound traffic and\nif the instance has an external IP address or uses a Cloud NAT instance. For more information, see Internet access requirements. Implied deny ingress rule. An\ningress rule whose action is deny, source is 0.0.0.0/0, and priority is the lowest possible (65535) protects all instances by blocking incoming connections to them. A\nhigher priority rule might allow incoming access. The default network includes some additional rules that override this one, allowing certain types of incoming\nconnections. https://cloud.google.com/vpc/docs/firewalls#default_firewall_rules",
+    "source": "ace-sample-1.pdf",
+    "number": 52
+  },
+  {
+    "question": "You are performing a monthly security check of your Google Cloud environment and want to know who has access to view data stored in your Google Cloud\nProject. What should you do?",
+    "options": {
+      "A": "Enable Audit Logs for all APIs that are related to data storage.",
+      "B": "Review the IAM permissions for any role that allows for data access.",
+      "C": "Review the Identity-Aware Proxy settings for each resource.",
+      "D": "Create a Data Loss Prevention job."
+    },
+    "answer": "B",
+    "explanation": "https://cloud.google.com/logging/docs/audit",
+    "source": "ace-sample-1.pdf",
+    "number": 53
+  },
+  {
+    "question": "You are managing several Google Cloud Platform (GCP) projects and need access to all logs for the past 60 days. You want to be able to explore and quickly\nanalyze the log contents. You want to follow Google- recommended practices to obtain the combined logs for all projects. What should you do?",
+    "options": {
+      "A": "Navigate to Stackdriver Logging and select resource.labels.project_id=\"*\"",
+      "B": "Create a Stackdriver Logging Export with a Sink destination to a BigQuery datase",
+      "C": "Configure the table expiration to 60 days.",
+      "D": "Create a Stackdriver Logging Export with a Sink destination to Cloud Storag"
+    },
+    "answer": "B",
+    "explanation": "Navigate to Stackdriver Logging and select resource.labels.project_id=*. is not right.\nLog entries are held in Stackdriver Logging for a limited time known as the retention period which is 30 days (default configuration). After that, the entries are\ndeleted. To keep log entries longer, you need to export them outside of Stackdriver Logging by configuring log sinks.\nRef: https://cloud.google.com/blog/products/gcp/best-practices-for-working-with-google-cloud-audit-logging \nConfigure a Cloud Scheduler job to read from\nStackdriver and store the logs in BigQuery. Configure the table expiration to 60 days. is not right.\nWhile this works, it makes no sense to use Cloud Scheduler job to read from Stackdriver and store the logs in BigQuery when Google provides a feature (export\nsinks) that does exactly the same thing and works out of the box.Ref: https://cloud.google.com/logging/docs/export/configure_export_v2\n Create a Stackdriver Logging Export with a Sink destination to Cloud Storage. Create a lifecycle rule to delete objects after 60 days. is not right.\nYou can export logs by creating one or more sinks that include a logs query and an export destination. Supported destinations for exported log entries are Cloud\nStorage, BigQuery, and\nPub/Sub.Ref: https://cloud.google.com/logging/docs/export/configure_export_v2\nSinks are limited to exporting log entries from the exact resource in which the sink was created: a Google Cloud project, organization, folder, or billing account. If it\nmakes it easier to exporting from all projects of an organication, you can create an aggregated sink that can export log entries from all the projects, folders, and\nbilling accounts of a Google Cloud\norganization.Ref: https://cloud.google.com/logging/docs/export/aggregated_sinks\nEither way, we now have the data in Cloud Storage, but querying logs information from Cloud Storage is harder than Querying information from BigQuery dataset.\nFor this reason, we should prefer Big Query over Cloud Storage.\n Create a Stackdriver Logging Export with a Sink destination to a BigQuery dataset. Configure the table expiration to 60 days. is the right answer.\nGuaranteed success with Our exam guides visit - https://www.certshared.com\nCertshared now are offering 100% pass ensure Associate-Cloud-Engineer dumps!\nhttps://www.certshared.com/exam/Associate-Cloud-Engineer/ (244 Q&As)You can export logs by creating one or more sinks that include a logs query and an export destination. Supported destinations for exported log entries are Cloud\nStorage, BigQuery, and\nPub/Sub.Ref: https://cloud.google.com/logging/docs/export/configure_export_v2\nSinks are limited to exporting log entries from the exact resource in which the sink was created: a Google Cloud project, organization, folder, or billing account. If it\nmakes it easier to exporting from all projects of an organication, you can create an aggregated sink that can export log entries from all the projects, folders, and\nbilling accounts of a Google Cloud\norganization.Ref: https://cloud.google.com/logging/docs/export/aggregated_sinks\nEither way, we now have the data in a BigQuery Dataset. Querying information from a Big Query dataset is easier and quicker than analyzing contents in Cloud\nStorage bucket. As our requirement is to Quickly analyze the log contents, we should prefer Big Query over Cloud Storage.\nAlso, You can control storage costs and optimize storage usage by setting the default table expiration for newly created tables in a dataset. If you set the property\nwhen the dataset is created, any table created in the dataset is deleted after the expiration period. If you set the property after the dataset is created, only new\ntables are deleted after the expiration period.For example, if you set the default table expiration to 7 days, older data is automatically deleted after 1 week.Ref:\nhttps://cloud.google.com/bigquery/docs/best-practices-storage",
+    "source": "ace-sample-1.pdf",
+    "number": 54
+  },
+  {
+    "question": "You are designing an application that uses WebSockets and HTTP sessions that are not distributed across the web servers. You want to ensure the application\nruns properly on Google Cloud Platform. What should you do?",
+    "options": {
+      "A": "Meet with the cloud enablement team to discuss load balancer options.",
+      "B": "Redesign the application to use a distributed user session service that does not rely on WebSockets and HTTP sessions.",
+      "C": "Review the encryption requirements for WebSocket connections with the security team.",
+      "D": "Convert the WebSocket code to use HTTP streaming."
+    },
+    "answer": "A",
+    "explanation": "Google HTTP(S) Load Balancing has native support for the WebSocket protocol when you use HTTP or HTTPS, not HTTP/2, as the protocol to the backend.\nRef: https://cloud.google.com/load-balancing/docs/https#websocket_proxy_support\nWe dont need to convert WebSocket code to use HTTP streaming or Redesign the application, as\nWebSocket support is offered by Google HTTP(S) Load Balancing. Reviewing the encryption requirements is a good idea but it has nothing to do with\nWebSockets.",
+    "source": "ace-sample-1.pdf",
+    "number": 55
+  },
+  {
+    "question": "You are storing sensitive information in a Cloud Storage bucket. For legal reasons, you need to be able to record all requests that read any of the stored data. You\nwant to make sure you comply with these requirements. What should you do?",
+    "options": {
+      "A": "Enable the Identity Aware Proxy API on the project.",
+      "B": "Scan the bucker using the Data Loss Prevention API.",
+      "C": "Allow only a single Service Account access to read the data.",
+      "D": "Enable Data Access audit logs for the Cloud Storage API."
+    },
+    "answer": "D",
+    "explanation": "Logged information Within Cloud Audit Logs, there are two types of logs: Admin Activity logs: Entries for operations that modify the configuration or metadata of a\nproject, bucket, or object. Data Access logs: Entries for operations that modify objects or read a project, bucket, or object. There are several sub-types of data\naccess logs: ADMIN_READ: Entries for operations that read the configuration or metadata of a project, bucket, or object. DATA_READ: Entries for operations that\nread an object. DATA_WRITE: Entries for operations that create or modify an object. https://cloud.google.com/storage/docs/audit-logs#types",
+    "source": "ace-sample-1.pdf",
+    "number": 56
+  },
+  {
+    "question": "You want to find out when users were added to Cloud Spanner Identity Access Management (IAM) roles on your Google Cloud Platform (GCP) project. What\nshould you do in the GCP Console?",
+    "options": {
+      "A": "Open the Cloud Spanner console to review configurations.",
+      "B": "Open the IAM & admin console to review IAM policies for Cloud Spanner roles.",
+      "C": "Go to the Stackdriver Monitoring console and review information for Cloud Spanner.",
+      "D": "Go to the Stackdriver Logging console, review admin activity logs, and filter them for Cloud Spanner IAM roles."
+    },
+    "answer": "D",
+    "explanation": "https://cloud.google.com/monitoring/audit-logging",
+    "source": "ace-sample-1.pdf",
+    "number": 57
+  },
+  {
+    "question": "You are working in a team that has developed a new application that needs to be deployed on Kubernetes. The production application is business critical and\nshould be optimized for reliability. You need to provision a Kubernetes cluster and want to follow Google-recommended practices. What should you do?",
+    "options": {
+      "A": "Create two configurations using gcloud config configurations create [NAME]. Run gcloud config configurations activate [NAME] to switch between accounts",
+      "B": "Create two configurations using gcloud config configurations create [NAME]. Run gcloud configurations list to start the Compute Engine instances.",
+      "C": "Activate two configurations using gcloud configurations activate [NAME]. Run gcloud config list to start the Compute Engine instances.",
+      "D": "Activate two configurations using gcloud configurations activate [NAME]. Run gcloud configurations list to start the Compute Engine instances."
+    },
+    "answer": "A",
+    "explanation": "\"Run gcloud configurations list to start the Compute Engine instances\". How the heck are you expecting to \"start\" GCE instances doing \"configuration list\".\nEach gcloud configuration has a 1 to 1 relationship with the region (if a region is defined). Since we have two different regions, we would need to create two\nseparate configurations using gcloud config configurations createRef: https://cloud.google.com/sdk/gcloud/reference/config/configurations/create\nSecondly, you can activate each configuration independently by running gcloud config configurations activate [NAME]Ref:\nhttps://cloud.google.com/sdk/gcloud/reference/config/configurations/activate\nFinally, while each configuration is active, you can run the gcloud compute instances start [NAME] command to start the instance in the configurations\nregion.https://cloud.google.com/sdk/gcloud/reference/compute/instances/start",
+    "source": "ace-sample-1.pdf",
+    "number": 58
+  },
+  {
+    "question": "You have an application that uses Cloud Spanner as a backend database. The application has a very predictable traffic pattern. You want to automatically scale up\nor down the number of Spanner nodes depending on traffic. What should you do?",
+    "options": {
+      "A": "Create a cron job that runs on a scheduled basis to review stackdriver monitoring metrics, and then resize the Spanner instance accordingly.",
+      "B": "Create a Stackdriver alerting policy to send an alert to oncall SRE emails when Cloud Spanner CPU exceeds the threshol",
+      "C": "SREs would scale resources up or down accordingly.",
+      "D": "Create a Stackdriver alerting policy to send an alert to Google Cloud Support email when Cloud Spanner CPU exceeds your threshol"
+    },
+    "answer": "D",
+    "explanation": "As to mexblood1's point, CPU utilization is a recommended proxy for traffic when it comes to Cloud Spanner. See: Alerts for high CPU utilization The following\ntable specifies our recommendations for maximum CPU usage for both single-region and multi-region instances. These numbers are to ensure that your instance\nhas enough compute capacity to continue to serve your traffic in the event of the loss of an entire zone (for single-region instances) or an entire region (for multi-\nregion instances). - https://cloud.google.com/spanner/docs/cpu-utilization",
+    "source": "ace-sample-1.pdf",
+    "number": 59
+  },
+  {
+    "question": "You have a Bigtable instance that consists of three nodes that store personally identifiable information (Pll) data. You need to log all read or write operations,\nincluding any metadata or configuration reads of this database table, in your company's Security Information and Event Management (SIEM) system. What should\nyou do?",
+    "options": {
+      "A": "• Navigate to Cloud Mentioning in the Google Cloud console, and create a custom monitoring job for theBigtable instance to track all changes.• Create an alert",
+      "B": "with the SIEM endpoint as a receiver",
+      "C": "Navigate to the Audit Logs page in the Google Cloud console, and enable Data Rea",
+      "D": "Data Write and Admin Read logs for the Bigtable instance• Create a Pub/Sub topic as a Cloud Logging sink destination, and add your SIEM as a subscriber to"
+    },
+    "answer": "B",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 60
+  },
+  {
+    "question": "Your organization has user identities in Active Directory. Your organization wants to use Active Directory as their source of truth for identities. Your organization\nwants to have full control over the Google accounts used by employees for all Google services, including your Google Cloud Platform (GCP) organization. What\nshould you do?",
+    "options": {
+      "A": "Use Google Cloud Directory Sync (GCDS) to synchronize users into Cloud Identity.",
+      "B": "Use the cloud Identity APIs and write a script to synchronize users to Cloud Identity.",
+      "C": "Export users from Active Directory as a CSV and import them to Cloud Identity via the Admin Console.",
+      "D": "Ask each employee to create a Google account using self signu"
+    },
+    "answer": "A",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 61
+  },
+  {
+    "question": "Guaranteed success with Our exam guides visit - https://www.certshared.com\nCertshared now are offering 100% pass ensure Associate-Cloud-Engineer dumps!\nhttps://www.certshared.com/exam/Associate-Cloud-Engineer/ (244 Q&As)You have an application that uses Cloud Spanner as a database backend to keep current state information about users. Cloud Bigtable logs all events triggered by\nusers. You export Cloud Spanner data to Cloud Storage during daily backups. One of your analysts asks you to join data from Cloud Spanner and Cloud Bigtable\nfor specific users. You want to complete this ad hoc request as efficiently as possible. What should you do?",
+    "options": {
+      "A": "Create a dataflow job that copies data from Cloud Bigtable and Cloud Storage for specific users.",
+      "B": "Create a dataflow job that copies data from Cloud Bigtable and Cloud Spanner for specific users.",
+      "C": "Create a Cloud Dataproc cluster that runs a Spark job to extract data from Cloud Bigtable and Cloud Storage for specific users.",
+      "D": "Create two separate BigQuery external tables on Cloud Storage and Cloud Bigtabl"
+    },
+    "answer": "D",
+    "explanation": "\"The Cloud Spanner to Cloud Storage Text template is a batch pipeline that reads in data from a Cloud\nSpanner table, optionally transforms the data via a JavaScript User Defined Function (UDF) that you provide, and writes it to Cloud Storage as CSV text files.\"\nhttps://cloud.google.com/dataflow/docs/guides/templates/provided-batch#cloudspannertogcstext\n\"The Dataflow connector for Cloud Spanner lets you read data from and write data to Cloud Spanner in a Dataflow pipeline\"\nhttps://cloud.google.com/spanner/docs/dataflow-connector https://cloud.google.com/bigquery/external-data-sources",
+    "source": "ace-sample-1.pdf",
+    "number": 62
+  },
+  {
+    "question": "Your company wants to migrate their on-premises workloads to Google Cloud. The current on-premises workloads consist of:\n• A Flask web application\n• AbackendAPI\n• A scheduled long-running background job for ETL and reporting.\nYou need to keep operational costs low You want to follow Google-recommended practices to migrate these workloads to serverless solutions on Google Cloud.\nWhat should you do?",
+    "options": {
+      "A": "Migrate the web application to App Engine and the backend API to Cloud Run Use Cloud Tasks to run your background job on Compute Engine",
+      "B": "Migrate the web application to App Engine and the backend API to Cloud Ru",
+      "C": "Use Cloud Tasks to run your background job on Cloud Run.",
+      "D": "Run the web application on a Cloud Storage bucket and the backend API on Cloud Run Use Cloud Tasks to run your background job on Cloud Run."
+    },
+    "answer": "B",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 63
+  },
+  {
+    "question": "You have a large 5-TB AVRO file stored in a Cloud Storage bucket. Your analysts are proficient only in SQL and need access to the data stored in this file. You\nwant to find a cost-effective way to complete their request as soon as possible. What should you do?",
+    "options": {
+      "A": "Load data in Cloud Datastore and run a SQL query against it.",
+      "B": "Create a BigQuery table and load data in BigQuer",
+      "C": "Run a SQL query on this table and drop this table after you complete your request.",
+      "D": "Create external tables in BigQuery that point to Cloud Storage buckets and run a SQL query on these external tables to complete your request."
+    },
+    "answer": "C",
+    "explanation": "https://cloud.google.com/bigquery/external-data-sources\nAn external data source is a data source that you can query directly from BigQuery, even though the data is not stored in BigQuery storage.\nBigQuery supports the following external data sources: Amazon S3\nAzure Storage Cloud Bigtable Cloud Spanner Cloud SQL Cloud Storage\nDrive",
+    "source": "ace-sample-1.pdf",
+    "number": 64
+  },
+  {
+    "question": "Several employees at your company have been creating projects with Cloud Platform and paying for it with their personal credit cards, which the company\nreimburses. The company wants to centralize all these projects under a single, new billing account. What should you do?",
+    "options": {
+      "A": "Contact cloud-billing@google.com with your bank account details and request a corporate billing account for your company.",
+      "B": "Create a ticket with Google Support and wait for their call to share your credit card details over the phone.",
+      "C": "In the Google Platform Console, go to the Resource Manage and move all projects to the root Organization.",
+      "D": "In the Google Cloud Platform Console, create a new billing account and set up a payment method."
+    },
+    "answer": "D",
+    "explanation": "(https://cloud.google.com/resource-manager/docs/project-migration#change_billing_account) https://cloud.google.com/billing/docs/concepts\nhttps://cloud.google.com/resource-manager/docs/project-migration",
+    "source": "ace-sample-1.pdf",
+    "number": 65
+  },
+  {
+    "question": "You are about to deploy a new Enterprise Resource Planning (ERP) system on Google Cloud. The application holds the full database in-memory for fast data\naccess, and you need to configure the most appropriate resources on Google Cloud for this application. What should you do?",
+    "options": {
+      "A": "Invite the user to transfer their existing account",
+      "B": "Invite the user to use an email alias to resolve the conflict",
+      "C": "Tell the user that they must delete their existing account",
+      "D": "Tell the user to remove all personal email from the existing account"
+    },
+    "answer": "A",
+    "explanation": "https://cloud.google.com/architecture/identity/migrating-consumer-accounts",
+    "source": "ace-sample-1.pdf",
+    "number": 66
+  },
+  {
+    "question": "You have an application that receives SSL-encrypted TCP traffic on port 443. Clients for this application are located all over the world. You want to minimize\nlatency for the clients. Which load balancing option should you use?",
+    "options": {
+      "A": "HTTPS Load Balancer",
+      "B": "Network Load Balancer",
+      "C": "SSL Proxy Load Balancer",
+      "D": "Internal TCP/UDP Load Balance"
+    },
+    "answer": "C",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 67
+  },
+  {
+    "question": "You created several resources in multiple Google Cloud projects. All projects are linked to different billing accounts. To better estimate future charges, you want to\nhave a single visual representation of all costs incurred. You want to include new cost data as soon as possible. What should you do?",
+    "options": {
+      "A": "Configure Billing Data Export to BigQuery and visualize the data in Data Studio.",
+      "B": "Visit the Cost Table page to get a CSV export and visualize it using Data Studio.",
+      "C": "Fill all resources in the Pricing Calculator to get an estimate of the monthly cost.",
+      "D": "Use the Reports view in the Cloud Billing Console to view the desired cost information."
+    },
+    "answer": "A",
+    "explanation": "https://cloud.google.com/billing/docs/how-to/export-data-bigquery \"Cloud Billing export to BigQuery enables you to export detailed Google Cloud billing data (such\nas usage, cost estimates, and pricing data) automatically throughout the day to a BigQuery dataset that you specify.\"",
+    "source": "ace-sample-1.pdf",
+    "number": 68
+  },
+  {
+    "question": "You have experimented with Google Cloud using your own credit card and expensed the costs to your company. Your company wants to streamline the billing\nprocess and charge the costs of your projects to their monthly invoice. What should you do?",
+    "options": {
+      "A": "Grant the financial team the IAM role of €Billing Account User€ on the billing account linked to your credit card.",
+      "B": "Set up BigQuery billing export and grant your financial department IAM access to query the data.",
+      "C": "Create a ticket with Google Billing Support to ask them to send the invoice to your company.",
+      "D": "Change the billing account of your projects to the billing account of your company."
+    },
+    "answer": "D",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 69
+  },
+  {
+    "question": "You need to track and verity modifications to a set of Google Compute Engine instances in your Google Cloud project. In particular, you want to verify OS system\npatching events on your virtual machines (VMs). What should you do?",
+    "options": {
+      "A": "Review the Compute Engine activity logs Select and review the Admin Event logs",
+      "B": "Review the Compute Engine activity logs Select and review the System Event logs",
+      "C": "Install the Cloud Logging Agent In Cloud Logging review the Compute Engine syslog logs",
+      "D": "Install the Cloud Logging Agent In Cloud Logging, review the Compute Engine operation logs"
+    },
+    "answer": "A",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 70
+  },
+  {
+    "question": "You are working for a hospital that stores Its medical images in an on-premises data room. The hospital wants to use Cloud Storage for archival storage of these\nGuaranteed success with Our exam guides visit - https://www.certshared.com\nCertshared now are offering 100% pass ensure Associate-Cloud-Engineer dumps!\nhttps://www.certshared.com/exam/Associate-Cloud-Engineer/ (244 Q&As)images. The hospital wants an automated process to upload any new medical images to Cloud Storage. You need to design and implement a solution. What\nshould you do?",
+    "options": {
+      "A": "Deploy a Dataflow job from the batch template \"Datastore lo Cloud Storage\" Schedule the batch job on the desired interval",
+      "B": "In the Cloud Console, go to Cloud Storage Upload the relevant images to the appropriate bucket",
+      "C": "Create a script that uses the gsutil command line interface to synchronize the on-premises storage with Cloud Storage Schedule the script as a cron job",
+      "D": "Create a Pub/Sub topic, and enable a Cloud Storage trigger for the Pub/Sub topi"
+    },
+    "answer": "C",
+    "explanation": "they require cloud storage for archival and the want to automate the process to upload new medical image to cloud storage, hence we go for gsutil to copy on-\nprem images to cloud storage and automate the process via cron job. whereas Pub/Sub listens to the changes in the Cloud Storage bucket and triggers the\npub/sub topic, which is not required.",
+    "source": "ace-sample-1.pdf",
+    "number": 71
+  },
+  {
+    "question": "You need to assign a Cloud Identity and Access Management (Cloud IAM) role to an external auditor. The auditor needs to have permissions to review your\nGoogle Cloud Platform (GCP) Audit Logs and also to review your Data Access logs. What should you do?",
+    "options": {
+      "A": "Assign the auditor the IAM role roles/logging.privateLogViewe",
+      "B": "Perform the export of logs to Cloud Storage.",
+      "C": "Assign the auditor the IAM role roles/logging.privateLogViewe",
+      "D": "Direct the auditor to also review the logs for changes to Cloud IAM policy."
+    },
+    "answer": "B",
+    "explanation": "Google Cloud provides Cloud Audit Logs, which is an integral part of Cloud Logging. It consists of two log streams for each project: Admin Activity and Data\nAccess, which are generated by Google Cloud services to help you answer the question of who did what, where, and when? within your Google Cloud projects.\nRef: https://cloud.google.com/iam/docs/job-functions/auditing#scenario_external_auditors",
+    "source": "ace-sample-1.pdf",
+    "number": 72
+  },
+  {
+    "question": "Your Dataproc cluster runs in a single Virtual Private Cloud (VPC) network in a single subnet with range 172.16.20.128/25. There are no private IP addresses\navailable in the VPC network. You want to add new VMs to communicate with your cluster using the minimum number of steps. What should you do?",
+    "options": {
+      "A": "Modify the existing subnet range to 172.16.20.0/24.",
+      "B": "Create a new Secondary IP Range in the VPC and configure the VMs to use that range.",
+      "C": "Create a new VPC network for the VM",
+      "D": "Enable VPC Peering between the VMs’ VPC network and the Dataproc cluster VPC network."
+    },
+    "answer": "A",
+    "explanation": "/25:\nCIDR to IP Range Result\nCIDR Range 172.16.20.128/25 Netmask 255.255.255.128\nWildcard Bits 0.0.0.127\nFirst IP 172.16.20.128\nFirst IP (Decimal) 2886734976 Last IP 172.16.20.255\nLast IP (Decimal) 2886735103 Total Host 128\nCIDR 172.16.20.128/25\n/24:\nCIDR to IP Range Result\nCIDR Range 172.16.20.128/24 Netmask 255.255.255.0\nWildcard Bits 0.0.0.255\nFirst IP 172.16.20.0\nFirst IP (Decimal) 2886734848 Last IP 172.16.20.255\nLast IP (Decimal) 2886735103 Total Host 256\nCIDR 172.16.20.128/24",
+    "source": "ace-sample-1.pdf",
+    "number": 73
+  },
+  {
+    "question": "You need to produce a list of the enabled Google Cloud Platform APIs for a GCP project using the gcloud command line in the Cloud Shell. The project name is\nmy-project. What should you do?",
+    "options": {
+      "A": "Run gcloud projects list to get the project ID, and then run gcloud services list --project <project ID>.",
+      "B": "Run gcloud init to set the current project to my-project, and then run gcloud services list --available.",
+      "C": "Run gcloud info to view the account value, and then run gcloud services list --account <Account>.",
+      "D": "Run gcloud projects describe <project ID> to verify the project value, and then run gcloud services list--available."
+    },
+    "answer": "A",
+    "explanation": "Guaranteed success with Our exam guides visit - https://www.certshared.com\nCertshared now are offering 100% pass ensure Associate-Cloud-Engineer dumps!\nhttps://www.certshared.com/exam/Associate-Cloud-Engineer/ (244 Q&As)`gcloud services list --available` returns not only the enabled services in the project but also services that CAN be enabled.\nhttps://cloud.google.com/sdk/gcloud/reference/services/list#--available\nRun the following command to list the enabled APIs and services in your current project: gcloud services list\nwhereas, Run the following command to list the APIs and services available to you in your current project: gcloud services list –available\nhttps://cloud.google.com/sdk/gcloud/reference/services/list#--available\n--available\nReturn the services available to the project to enable. This list will include any services that the project has already enabled.\nTo list the services the current project has enabled for consumption, run: gcloud services list --enabled\nTo list the services the current project can enable for consumption, run: gcloud services list –available",
+    "source": "ace-sample-1.pdf",
+    "number": 74
+  },
+  {
+    "question": "You recently deployed a new version of an application to App Engine and then discovered a bug in the release. You need to immediately revert to the prior version\nof the application. What should you do?",
+    "options": {
+      "A": "Run gcloud app restore.",
+      "B": "On the App Engine page of the GCP Console, select the application that needs to be reverted and click Revert.",
+      "C": "On the App Engine Versions page of the GCP Console, route 100% of the traffic to the previous version.",
+      "D": "Deploy the original version as a separate applicatio"
+    },
+    "answer": "C",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 75
+  },
+  {
+    "question": "You have created a new project in Google Cloud through the gcloud command line interface (CLI) and linked a billing account. You need to create a new Compute\nEngine instance using the CLI. You need to perform the prerequisite steps. What should you do?",
+    "options": {
+      "A": "Create a Cloud Monitoring Workspace.",
+      "B": "Create a VPC network in the project.",
+      "C": "Enable the compute googleapis.com API.",
+      "D": "Grant yourself the IAM role of Compute Admin."
+    },
+    "answer": "D",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 76
+  },
+  {
+    "question": "You need to immediately change the storage class of an existing Google Cloud bucket. You need to reduce service cost for infrequently accessed files stored in\nthat bucket and for all files that will be added to that bucket in the future. What should you do?",
+    "options": {
+      "A": "Use the gsutil to rewrite the storage class for the bucket Change the default storage class for the bucket",
+      "B": "Use the gsutil to rewrite the storage class for the bucket Set up Object Lifecycle management on the bucket",
+      "C": "Create a new bucket and change the default storage class for the bucket Set up Object Lifecycle management on lite bucket",
+      "D": "Create a new bucket and change the default storage class for the bucket import the files from the previous bucket into the new bucket"
+    },
+    "answer": "B",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 77
+  },
+  {
+    "question": "Your management has asked an external auditor to review all the resources in a specific project. The security team has enabled the Organization Policy called\nDomain Restricted Sharing on the organization node by specifying only your Cloud Identity domain. You want the auditor to only be able to view, but not modify,\nthe resources in that project. What should you do?",
+    "options": {
+      "A": "Ask the auditor for their Google account, and give them the Viewer role on the project.",
+      "B": "Ask the auditor for their Google account, and give them the Security Reviewer role on the project.",
+      "C": "Create a temporary account for the auditor in Cloud Identity, and give that account the Viewer role on the project.",
+      "D": "Create a temporary account for the auditor in Cloud Identity, and give that account the Security Reviewer role on the project."
+    },
+    "answer": "C",
+    "explanation": "Using primitive roles The following table lists the primitive roles that you can grant to access a project, the description of what the role does, and the permissions\nbundled within that role. Avoid using primitive roles except when absolutely necessary. These roles are very powerful, and include a large number of permissions\nacross all Google Cloud services. For more details on when you should use primitive roles, see the Identity and Access Management FAQ. IAM predefined roles\nare much more granular, and allow you to carefully manage the set of permissions that your users have access to. See Understanding Roles for a list of roles that\ncan be granted at the project level. Creating custom roles can further increase the control you have over user permissions. https://cloud.google.com/resource-\nmanager/docs/access-control-proj#using_primitive_roles\nhttps://cloud.google.com/iam/docs/understanding-custom-roles",
+    "source": "ace-sample-1.pdf",
+    "number": 78
+  },
+  {
+    "question": "You have created a code snippet that should be triggered whenever a new file is uploaded to a Cloud Storage bucket. You want to deploy this code snippet. What\nshould you do?",
+    "options": {
+      "A": "Use App Engine and configure Cloud Scheduler to trigger the application using Pub/Sub.",
+      "B": "Use Cloud Functions and configure the bucket as a trigger resource.",
+      "C": "Use Google Kubernetes Engine and configure a CronJob to trigger the application using Pub/Sub.",
+      "D": "Use Dataflow as a batch job, and configure the bucket as a data source."
+    },
+    "answer": "B",
+    "explanation": "Google Cloud Storage Triggers\nGuaranteed success with Our exam guides visit - https://www.certshared.com\nCertshared now are offering 100% pass ensure Associate-Cloud-Engineer dumps!\nhttps://www.certshared.com/exam/Associate-Cloud-Engineer/ (244 Q&As)Cloud Functions can respond to change notifications emerging from Google Cloud Storage. These notifications can be configured to trigger in response to various\nevents inside a bucket—object creation, deletion, archiving and metadata updates.\nNote: Cloud Functions can only be triggered by Cloud Storage buckets in the same Google Cloud Platform project.\nEvent types\nCloud Storage events used by Cloud Functions are based on Cloud Pub/Sub Notifications for Google Cloud Storage and can be configured in a similar way.\nSupported trigger type values are: google.storage.object.finalize google.storage.object.delete google.storage.object.archive google.storage.object.metadataUpdate\nObject Finalize\nTrigger type value: google.storage.object.finalize\nThis event is sent when a new object is created (or an existing object is overwritten, and a new generation of that object is created) in the bucket.\nhttps://cloud.google.com/functions/docs/calling/storage#event_types",
+    "source": "ace-sample-1.pdf",
+    "number": 79
+  },
+  {
+    "question": "You have a managed instance group comprised of preemptible VM's. All of the VM's keepdeleting and\nrecreating themselves every minute. What is a possible cause of thisbehavior?",
+    "options": {
+      "A": "Your zonal capacity is limited, causing all preemptible VM's to be shutdown torecover capacit",
+      "B": "Try deploying your group to another zone.",
+      "C": "You have hit your instance quota for the region.",
+      "D": "Your managed instance group's VM's are toggled to only last 1 minute inpreemptible settings."
+    },
+    "answer": "D",
+    "explanation": "as the instances (normal or preemptible) would be terminated and relaunched if the health check fails either due to application not configured properly or the\ninstances firewall do not allow health check to happen.\nGCP provides health check systems that connect to virtual machine (VM) instances on a configurable, periodic basis. Each connection attempt is called a probe.\nGCP records the success or failure of each probe.\nHealth checks and load balancers work together. Based on a configurable number of sequential successful or failed probes, GCP computes an overall health state\nfor each VM in the load balancer. VMs that respond successfully for the configured number of times are considered healthy. VMs that fail to respond successfully\nfor a separate number of times are unhealthy.\nGCP uses the overall health state of each VM to determine its eligibility for receiving new requests. In addition to being able to configure probe frequency and\nhealth state thresholds, you can configure the criteria that define a successful probe.",
+    "source": "ace-sample-1.pdf",
+    "number": 80
+  },
+  {
+    "question": "You need to select and configure compute resources for a set of batch processing jobs. These jobs take around 2 hours to complete and are run nightly. You want\nto minimize service costs. What should you do?",
+    "options": {
+      "A": "Select Google Kubernetes Engin",
+      "B": "Use a single-node cluster with a small instance type.",
+      "C": "Select Google Kubernetes Engin",
+      "D": "Use a three-node cluster with micro instance types."
+    },
+    "answer": "C",
+    "explanation": "If your apps are fault-tolerant and can withstand possible instance preemptions, then preemptible instances can reduce your Compute Engine costs significantly.\nFor example, batch processing jobs can run on preemptible instances. If some of those instances stop during processing, the job slows but does not completely\nstop. Preemptible instances complete your batch processing tasks without placing additional workload on your existing instances and without requiring you to pay\nfull price for additional normal instances.\nhttps://cloud.google.com/compute/docs/instances/preemptible",
+    "source": "ace-sample-1.pdf",
+    "number": 81
+  },
+  {
+    "question": "You are using Deployment Manager to create a Google Kubernetes Engine cluster. Using the same Deployment Manager deployment, you also want to create a\nDaemonSet in the kube-system namespace of the cluster. You want a solution that uses the fewest possible services. What should you do?",
+    "options": {
+      "A": "Add the cluster’s API as a new Type Provider in Deployment Manager, and use the new type to create the DaemonSet.",
+      "B": "Use the Deployment Manager Runtime Configurator to create a new Config resource that contains the DaemonSet definition.",
+      "C": "With Deployment Manager, create a Compute Engine instance with a startup script that uses kubectl to create the DaemonSet.",
+      "D": "In the cluster’s definition in Deployment Manager, add a metadata that has kube-system as key and the DaemonSet manifest as value."
+    },
+    "answer": "A",
+    "explanation": "Adding an API as a type provider\nThis page describes how to add an API to Google Cloud Deployment Manager as a type provider. To learn more about types and type providers, read the Types\noverview documentation.\nA type provider exposes all of the resources of a third-party API to Deployment Manager as base types that you can use in your configurations. These types must\nbe directly served by a RESTful API that supports Create, Read, Update, and Delete (CRUD).\nIf you want to use an API that is not automatically provided by Google with Deployment Manager, you must add the API as a type provider.\nhttps://cloud.google.com/deployment-manager/docs/configuration/type-providers/creating-type-provider",
+    "source": "ace-sample-1.pdf",
+    "number": 82
+  },
+  {
+    "question": "Your company set up a complex organizational structure on Google Could Platform. The structure includes hundreds of folders and projects. Only a few team\nGuaranteed success with Our exam guides visit - https://www.certshared.com\nCertshared now are offering 100% pass ensure Associate-Cloud-Engineer dumps!\nhttps://www.certshared.com/exam/Associate-Cloud-Engineer/ (244 Q&As)members should be able to view the hierarchical structure. You need to assign minimum permissions to these team members and you want to follow Google-\nrecommended practices. What should you do?",
+    "options": {
+      "A": "Add the users to roles/browser role.",
+      "B": "Add the users to roles/iam.roleViewer role.",
+      "C": "Add the users to a group, and add this group to roles/browser role.",
+      "D": "Add the users to a group, and add this group to roles/iam.roleViewer role."
+    },
+    "answer": "C",
+    "explanation": "We need to apply the GCP Best practices. roles/browser Browser Read access to browse the hierarchy for a project, including the folder, organization, and IAM\npolicy. This role doesn't include permission to view resources in the project. https://cloud.google.com/iam/docs/understanding-roles",
+    "source": "ace-sample-1.pdf",
+    "number": 83
+  },
+  {
+    "question": "Your organization has three existing Google Cloud projects. You need to bill the Marketing department for only their Google Cloud services for a new initiative\nwithin their group. What should you do?",
+    "options": {
+      "A": "* 1. Verify that you ace assigned the Billing Administrator IAM role tor your organization's Google Cloud Project for the Marketing department* 2. Link the new",
+      "B": "* 1. Verify that you are assigned the Billing Administrator IAM role for your organization's Google Cloud account* 2. Create a new Google Cloud Project for the",
+      "C": "* 1. Verify that you are assigned the Organization Administrator IAM role for your organization's Google Cloud account* 2. Create a new Google Cloud Project",
+      "D": "* 1. Verity that you are assigned the Organization Administrator IAM role for your organization's Google Cloud account* 2. Create a new Google Cloud Project"
+    },
+    "answer": "A",
+    "explanation": "",
+    "source": "ace-sample-1.pdf",
+    "number": 84
+  },
+  {
+    "question": "Your company has multiple projects linked to a single billing account in Google Cloud. You need to visualize the costs with specific metrics that should be\ndynamically calculated based on company-specific criteria. You want to automate the process. What should you do?",
+    "options": {
+      "A": "In the Google Cloud console, visualize the costs related to the projects in the Reports section.",
+      "B": "In the Google Cloud console, visualize the costs related to the projects in the Cost breakdown section.",
+      "C": "In the Google Cloud console, use the export functionality of the Cost tabl",
+      "D": "Create a Looker Studiodashboard on top of the CSV export."
+    },
+    "answer": "D",
+    "explanation": "",
+    "source": "ace-sample-2.pdf",
+    "number": 85
+  },
+  {
+    "question": "Your organization has a dedicated person who creates and manages all service accounts for Google Cloud projects. You need to assign this person the minimum\nrole for projects. What should you do?",
+    "options": {
+      "A": "Add the user to roles/iam.roleAdmin role.",
+      "B": "Add the user to roles/iam.securityAdmin role.",
+      "C": "Add the user to roles/iam.serviceAccountUser role.",
+      "D": "Add the user to roles/iam.serviceAccountAdmin role."
+    },
+    "answer": "D",
+    "explanation": "",
+    "source": "ace-sample-2.pdf",
+    "number": 86
+  },
+  {
+    "question": "You have 32 GB of data in a single file that you need to upload to a Nearline Storage bucket. The WAN connection you are using is rated at 1 Gbps, and you are\nthe only one on the connection. You want to use as much of the rated 1 Gbps as possible to transfer the file rapidly. How should you upload the file?",
+    "options": {
+      "A": "Use the GCP Console to transfer the file instead of gsutil.",
+      "B": "Enable parallel composite uploads using gsutil on the file transfer.",
+      "C": "Decrease the TCP window size on the machine initiating the transfer.",
+      "D": "Change the storage class of the bucket from Nearline to Multi-Regional."
+    },
+    "answer": "B",
+    "explanation": "https://cloud.google.com/storage/docs/parallel-composite-uploads https://cloud.google.com/storage/docs/uploads-downloads#parallel-composite-uploads",
+    "source": "ace-sample-2.pdf",
+    "number": 87
+  },
+  {
+    "question": "Your company's security vulnerability management policy wonts 3 member of the security team to have visibility into vulnerabilities and other OS metadata for a\nspecific Compute Engine instance This Compute Engine instance hosts a critical application in your Goggle Cloud project. You need to implement your company's\nsecurity vulnerability management policy. What should you dc?",
+    "options": {
+      "A": "• Ensure that the Ops Agent Is Installed on the Compute Engine instance.• Create a custom metric in the Cloud Monitoring dashboard.• Provide the security",
+      "B": "• Ensure that the Ops Agent is installed on tie Compute Engine instance.• Provide the security team member roles/configure.inventoryViewer permission.",
+      "C": "• Ensure that the OS Config agent Is Installed on the Compute Engine instance.• Provide the security team member roles/configure.vulnerabilityViewer",
+      "D": "• Ensure that the OS Config agent is installed on the Compute Engine instance• Create a log sink Co a BigQuery dataset.• Provide the security team member"
+    },
+    "answer": "C",
+    "explanation": "",
+    "source": "ace-sample-2.pdf",
+    "number": 88
+  },
+  {
+    "question": "You need to manage a third-party application that will run on a Compute Engine instance. Other Compute Engine instances are already running with default\nconfiguration. Application installation files are hosted on Cloud Storage. You need to access these files from the new instance without allowing other virtual\nmachines (VMs) to access these files. What should you do?\nPassing Certification Exams Made Easy visit - https://www.surepassexam.com\nRecommend!! Get the Full Associate-Cloud-Engineer dumps in VCE and PDF From SurePassExam\nhttps://www.surepassexam.com/Associate-Cloud-Engineer-exam-dumps.html (244 New Questions)A. Create the instance with the default Compute Engine service account Grant the service account permissions on Cloud Storage.\nB. Create the instance with the default Compute Engine service account Add metadata to the objects on Cloud Storage that matches the metadata on the new\ninstance.\nC. Create a new service account and assig n this service account to the new instance Grant the service account permissions on Cloud Storage.\nD. Create a new service account and assign this service account to the new instance Add metadata to the objects on Cloud Storage that matches the metadata on\nthe new instance.\nAnswer: B\nExplanation: \nhttps://cloud.google.com/iam/docs/best-practices-for-using-and-managing-service-accounts\nIf an application uses third-party or custom identities and needs to access a resource, such as a BigQuery dataset or a Cloud Storage bucket, it must perform a\ntransition between principals. Because Google Cloud APIs don't recognize third-party or custom identities, the application can't propagate the end-user's identity to\nBigQuery or Cloud Storage. Instead, the application has to perform the access by using a different Google identity.\nNEW QUESTION 7\nYou are building a data lake on Google Cloud for your Internet of Things (loT) application. The loT application has millions of sensors that are constantly streaming\nstructured and unstructured data to your backend in the cloud. You want to build a highly available and resilient architecture based on\nGoogle-recommended practices. What should you do?",
+    "options": {
+      "A": "Stream data to Pub/Sub, and use Dataflow to send data to Cloud Storage",
+      "B": "Stream data to Pub/Su",
+      "C": "and use Storage Transfer Service to send data to BigQuery.",
+      "D": "Stream data to Dataflow, and use Storage Transfer Service to send data to BigQuery."
+    },
+    "answer": "B",
+    "explanation": "",
+    "source": "ace-sample-2.pdf",
+    "number": 89
+  },
+  {
+    "question": "You have an object in a Cloud Storage bucket that you want to share with an external company. The object contains sensitive data. You want access to the\ncontent to be removed after four hours. The external company does not have a Google account to which you can grant specific user-based access privileges. You\nwant to use the most secure method that requires the fewest steps. What should you do?",
+    "options": {
+      "A": "Create a signed URL with a four-hour expiration and share the URL with the company.",
+      "B": "Set object access to ‘public’ and use object lifecycle management to remove the object after four hours.",
+      "C": "Configure the storage bucket as a static website and furnish the object’s URL to the compan",
+      "D": "Delete the object from the storage bucket after four hours."
+    },
+    "answer": "A",
+    "explanation": "Signed URLs are used to give time-limited resource access to anyone in possession of the URL, regardless of whether they have a Google account.\nhttps://cloud.google.com/storage/docs/access-control/signed-urls",
+    "source": "ace-sample-2.pdf",
+    "number": 90
+  },
+  {
+    "question": "You have created an application that is packaged into a Docker image. You want to deploy the Docker image as a workload on Google Kubernetes Engine. What\nshould you do?",
+    "options": {
+      "A": "Upload the image to Cloud Storage and create a Kubernetes Service referencing the image.",
+      "B": "Upload the image to Cloud Storage and create a Kubernetes Deployment referencing the image.",
+      "C": "Upload the image to Container Registry and create a Kubernetes Service referencing the image.",
+      "D": "Upload the image to Container Registry and create a Kubernetes Deployment referencing the image."
+    },
+    "answer": "D",
+    "explanation": "A deployment is responsible for keeping a set of pods running. A service is responsible for enabling network access to a set of pods.",
+    "source": "ace-sample-2.pdf",
+    "number": 91
+  },
+  {
+    "question": "You need to set up permissions for a set of Compute Engine instances to enable them to write data into a particular Cloud Storage bucket. You want to follow\nGoogle-recommended practices. What should you do?",
+    "options": {
+      "A": "Create a service account with an access scop",
+      "B": "Use the access scope ‘https://www.googleapis.com/auth/devstorage.write_only’.",
+      "C": "Create a service account with an access scop",
+      "D": "Use the access scope ‘https://www.googleapis.com/auth/cloud-platform’."
+    },
+    "answer": "C",
+    "explanation": "https://cloud.google.com/iam/docs/understanding-service-accounts#using_service_accounts_with_compute_eng https://cloud.google.com/storage/docs/access-\ncontrol/iam-roles\nPassing Certification Exams Made Easy visit - https://www.surepassexam.com\nRecommend!! Get the Full Associate-Cloud-Engineer dumps in VCE and PDF From SurePassExam\nhttps://www.surepassexam.com/Associate-Cloud-Engineer-exam-dumps.html (244 New Questions)NEW QUESTION 10\nYou are deploying an application to App Engine. You want the number of instances to scale based on request rate. You need at least 3 unoccupied instances at all\ntimes. Which scaling type should you use?\nA. Manual Scaling with 3 instances.\nB. Basic Scaling with min_instances set to 3.\nC. Basic Scaling with max_instances set to 3.\nD. Automatic Scaling with min_idle_instances set to 3.\nAnswer: D",
+    "source": "ace-sample-2.pdf",
+    "number": 92
+  },
+  {
+    "question": "You need to manage a Cloud Spanner Instance for best query performance. Your instance in production runs in a single Google Cloud region. You need to\nimprove performance in the shortest amount of time. You want to follow Google best practices for service configuration. What should you do?",
+    "options": {
+      "A": "Create an alert in Cloud Monitoring to alert when the percentage of high priority CPU utilization reaches 45% If you exceed this threshold, add nodes lo your",
+      "B": "Create an alert in Cloud Monitoring to alert when the percentage to high priority CPU utilization reaches 45% Use database query statistics to identify queries",
+      "C": "Create an alert in Cloud Monitoring to alert when the percentage of high priority CPU utilization reaches 65% If you exceed this threshold, add nodes to your",
+      "D": "Create an alert in Cloud Monitoring to alert when the percentage of high priority CPU utilization reaches 65%. Use database query statistics to identity queries"
+    },
+    "answer": "B",
+    "explanation": "https://cloud.google.com/spanner/docs/cpu-utilization#recommended-max",
+    "source": "ace-sample-2.pdf",
+    "number": 93
+  },
+  {
+    "question": "You are building a pipeline to process time-series data. Which Google Cloud Platform services should you put in boxes 1,2,3, and 4?",
+    "options": {
+      "A": "Cloud Pub/Sub, Cloud Dataflow, Cloud Datastore, BigQuery",
+      "B": "Firebase Messages, Cloud Pub/Sub, Cloud Spanner, BigQuery",
+      "C": "Cloud Pub/Sub, Cloud Storage, BigQuery, Cloud Bigtable",
+      "D": "Cloud Pub/Sub, Cloud Dataflow, Cloud Bigtable, BigQuery"
+    },
+    "answer": "D",
+    "explanation": "",
+    "source": "ace-sample-2.pdf",
+    "number": 94
+  },
+  {
+    "question": "You are in charge of provisioning access for all Google Cloud users in your organization. Your company recently acquired a startup company that has their own\nGoogle Cloud organization. You need to ensure that your Site Reliability Engineers (SREs) have the same project permissions in the startup company's\norganization as in your own organization. What should you do?",
+    "options": {
+      "A": "Enable the Node Auto-Repair feature for your GKE cluster.",
+      "B": "Enable the Node Auto-Upgrades feature for your GKE cluster.",
+      "C": "Select the latest available cluster version for your GKE cluster.",
+      "D": "Select “Container-Optimized OS (cos)” as a node image for your GKE cluster."
+    },
+    "answer": "B",
+    "explanation": "Creating or upgrading a cluster by specifying the version as latest does not provide automatic upgrades. Enable node auto-upgrades to ensure that the nodes in\nyour cluster are up-to-date with the latest stable version.\nhttps://cloud.google.com/kubernetes-engine/versioning-and-upgrades\nNode auto-upgrades help you keep the nodes in your cluster up to date with the cluster master version when your master is updated on your behalf. When you\ncreate a new cluster or node pool with Google Cloud Console or the gcloud command, node auto-upgrade is enabled by default.\nRef: https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-upgrades",
+    "source": "ace-sample-2.pdf",
+    "number": 95
+  },
+  {
+    "question": "Your managed instance group raised an alert stating that new instance creation has failed to create new instances. You need to maintain the number of running\ninstances specified by the template to be able to process expected application traffic. What should you do?",
+    "options": {
+      "A": "Create an instance template that contains valid syntax which will be used by the instance grou",
+      "B": "Delete any persistent disks with the same name as instance names.",
+      "C": "Create an instance template that contains valid syntax that will be used by the instance grou",
+      "D": "Verify that the instance name and persistent disk name values are not the same in the template."
+    },
+    "answer": "A",
+    "explanation": "https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-migs https://cloud.google.com/compute/docs/instance-\ntemplates#how_to_update_instance_templates",
+    "source": "ace-sample-2.pdf",
+    "number": 96
+  },
+  {
+    "question": "You have an application that runs on Compute Engine VM instances in a custom Virtual Private Cloud (VPC). Your company's security policies only allow the use\nto internal IP addresses on VM instances and do not let VM instances connect to the internet. You need to ensure that the application can access a file hosted in a\nCloud Storage bucket within your project. What should you do?\nPassing Certification Exams Made Easy visit - https://www.surepassexam.com\nRecommend!! Get the Full Associate-Cloud-Engineer dumps in VCE and PDF From SurePassExam\nhttps://www.surepassexam.com/Associate-Cloud-Engineer-exam-dumps.html (244 New Questions)A. Enable Private Service Access on the Cloud Storage Bucket.\nB. Add slorage.googleapis.com to the list of restricted services in a VPC Service Controls perimeter and add your project to the list to protected projects.\nC. Enable Private Google Access on the subnet within the custom VPC.\nD. Deploy a Cloud NAT instance and route the traffic to the dedicated IP address of the Cloud Storage bucket.\nAnswer: A\nNEW QUESTION 42\nYou are assigned to maintain a Google Kubernetes Engine (GKE) cluster named dev that was deployed on Google Cloud. You want to manage the GKE\nconfiguration using the command line interface (CLI). You have just downloaded and installed the Cloud SDK. You want to ensure that future CLI commands by\ndefault address this specific cluster. What should you do?",
+    "options": {
+      "A": "Use the command gcloud config set container/cluster dev.",
+      "B": "Use the command gcloud container clusters update dev.",
+      "C": "Create a file called gke.default in the ~/.gcloud folder that contains the cluster name.",
+      "D": "Create a file called defaults.json in the ~/.gcloud folder that contains the cluster name."
+    },
+    "answer": "A",
+    "explanation": "To set a default cluster for gcloud commands, run the following command: gcloud config set container/cluster CLUSTER_NAME\nhttps://cloud.google.com/kubernetes-engine/docs/how-to/managing-clusters?hl=en",
+    "source": "ace-sample-2.pdf",
+    "number": 97
+  },
+  {
+    "question": "You have a Google Cloud Platform account with access to both production and development projects. You need to create an automated process to list all compute\ninstances in development and production projects on a daily basis. What should you do?",
+    "options": {
+      "A": "Create two configurations using gcloud confi",
+      "B": "Write a script that sets configurations as active, individuall",
+      "C": "For each configuration, use gcloud compute instances list to get a list of compute resources.",
+      "D": "Create two configurations using gsutil confi"
+    },
+    "answer": "A",
+    "explanation": "You can create two configurations – one for the development project and another for the production project. And you do that by running “gcloud config\nconfigurations create” command.https://cloud.google.com/sdk/gcloud/reference/config/configurations/createIn your custom script, you can load these\nconfigurations one at a time and execute gcloud compute instances list to list Google Compute Engine instances in the project that is active in the gcloud\nconfiguration.Ref: https://cloud.google.com/sdk/gcloud/reference/compute/instances/listOnce you have this information, you can export it in a suitable format to a\nsuitable target e.g. export as CSV or export to Cloud Storage/BigQuery/SQL, etc",
+    "source": "ace-sample-2.pdf",
+    "number": 98
+  },
+  {
+    "question": "You want to run a single caching HTTP reverse proxy on GCP for a latency-sensitive website. This specific reverse proxy consumes almost no CPU. You want to\nhave a 30-GB in-memory cache, and need an additional 2 GB of memory for the rest of the processes. You want to minimize cost. How should you run this reverse\nproxy?",
+    "options": {
+      "A": "Create a Cloud Memorystore for Redis instance with 32-GB capacity.",
+      "B": "Run it on Compute Engine, and choose a custom instance type with 6 vCPUs and 32 GB of memory.",
+      "C": "Package it in a container image, and run it on Kubernetes Engine, using n1-standard-32 instances as nodes.",
+      "D": "Run it on Compute Engine, choose the instance type n1-standard-1, and add an SSD persistent disk of 32 GB."
+    },
+    "answer": "A",
+    "explanation": "What is Google Cloud Memorystore?\nOverview. Cloud Memorystore for Redis is a fully managed Redis service for Google Cloud Platform. Applications running on Google Cloud Platform can achieve\nextreme performance by leveraging the highly scalable, highly available, and secure Redis service without the burden of managing complex Redis deployments.",
+    "source": "ace-sample-2.pdf",
+    "number": 99
+  },
+  {
+    "question": "You manage an App Engine Service that aggregates and visualizes data from BigQuery. The application is deployed with the default App Engine Service account.\nThe data that needs to be visualized resides in a different project managed by another team. You do not have access to this project, but you want your application\nto be able to read data from the BigQuery dataset. What should you do?",
+    "options": {
+      "A": "Ask the other team to grant your default App Engine Service account the role of BigQuery Job User.",
+      "B": "Ask the other team to grant your default App Engine Service account the role of BigQuery Data Viewer.",
+      "C": "In Cloud IAM of your project, ensure that the default App Engine service account has the role of BigQuery Data Viewer.",
+      "D": "In Cloud IAM of your project, grant a newly created service account from the other team the role of BigQuery Job User in your project."
+    },
+    "answer": "B",
+    "explanation": "The resource that you need to get access is in the other project. roles/bigquery.dataViewer BigQuery Data Viewer\nWhen applied to a table or view, this role provides permissions to: Read data and metadata from the table or view.\nThis role cannot be applied to individual models or routines. When applied to a dataset, this role provides permissions to:\nRead the dataset's metadata and list tables in the dataset. Read data and metadata from the dataset's tables.\nWhen applied at the project or organization level, this role can also enumerate all datasets in the project. Additional roles, however, are necessary to allow the\nrunning of jobs.",
+    "source": "ace-sample-2.pdf",
+    "number": 100
+  },
+  {
+    "question": "For analysis purposes, you need to send all the logs from all of your Compute Engine instances to a BigQuery dataset called platform-logs. You have already\ninstalled the Stackdriver Logging agent on all the instances. You want to minimize cost. What should you do?",
+    "options": {
+      "A": "1. Give the BigQuery Data Editor role on the platform-logs dataset to the service accounts used by your instances.2. Update your instances’ metadata to add",
+      "B": "1. In Stackdriver Logging, create a logs export with a Cloud Pub/Sub topic called logs as a sink.2.Create a Cloud Function that is triggered by messages in the",
+      "C": "1. In Stackdriver Logging, create a filter to view only Compute Engine logs.2. Click Create Export.3.Choose BigQuery as Sink Service, and the platform-logs",
+      "D": "1. Create a Cloud Function that has the BigQuery User role on the platform-logs dataset.2. Configure this Cloud Function to create a BigQuery Job that"
+    },
+    "answer": "C",
+    "explanation": "* 1. In Stackdriver Logging, create a filter to view only Compute Engine logs. 2. Click Create Export. 3. Choose BigQuery as Sink Service, and the platform-logs\ndataset as Sink Destination.\nPassing Certification Exams Made Easy visit - https://www.surepassexam.com\nRecommend!! Get the Full Associate-Cloud-Engineer dumps in VCE and PDF From SurePassExam\nhttps://www.surepassexam.com/Associate-Cloud-Engineer-exam-dumps.html (244 New Questions)NEW QUESTION 56\nYou need to reduce GCP service costs for a division of your company using the fewest possible steps. You need to turn off all configured services in an existing\nGCP project. What should you do?\nA. * 1. Verify that you are assigned the Project Owners IAM role for this project.* 2. Locate the project in the GCP console, click Shut down and then enter the\nproject ID.\nB. * 1. Verify that you are assigned the Project Owners IAM role for this project.* 2. Switch to the project in the GCP console, locate the resources and delete them.\nC. * 1. Verify that you are assigned the Organizational Administrator IAM role for this project.* 2. Locate the project in the GCP console, enter the project ID and\nthen click Shut down.\nD. * 1. Verify that you are assigned the Organizational Administrators IAM role for this project.* 2. Switch to the project in the GCP console, locate the resources\nand delete them.\nAnswer: A\nExplanation: \nhttps://cloud.google.com/run/docs/tutorials/gcloud https://cloud.google.com/resource-manager/docs/creating-managing-projects\nhttps://cloud.google.com/iam/docs/understanding-roles#primitive_roles\nYou can shut down projects using the Cloud Console. When you shut down a project, this immediately happens: All billing and traffic serving stops, You lose\naccess to the project, The owners of the project will be notified and can stop the deletion within 30 days, The project will be scheduled to be deleted after 30 days.\nHowever, some resources may be deleted much earlier.",
+    "source": "ace-sample-2.pdf",
+    "number": 101
+  },
+  {
+    "question": "You are developing a financial trading application that will be used globally. Data is stored and queried using a relational structure, and clients from all over the\nworld should get the exact identical state of the data. The application will be deployed in multiple regions to provide the lowest latency to end users. You need to\nselect a storage option for the application data while minimizing latency. What should you do?",
+    "options": {
+      "A": "Use Cloud Bigtable for data storage.",
+      "B": "Use Cloud SQL for data storage.",
+      "C": "Use Cloud Spanner for data storage.",
+      "D": "Use Firestore for data storage."
+    },
+    "answer": "C",
+    "explanation": "Keywords, Financial data (large data) used globally, data stored and queried using relational structure (SQL), clients should get exact identical copies(Strong\nConsistency), Multiple region, low latency to end user, select storage option to minimize latency.",
+    "source": "ace-sample-2.pdf",
+    "number": 102
+  },
+  {
+    "question": "You have successfully created a development environment in a project for an application. This application uses Compute Engine and Cloud SQL. Now, you need\nto create a production environment for this application.\nThe security team has forbidden the existence of network routes between these 2 environments, and asks you to follow Google-recommended practices. What\nshould you do?",
+    "options": {
+      "A": "Create a new project, enable the Compute Engine and Cloud SQL APIs in that project, and replicate the setup you have created in the development",
+      "B": "Create a new production subnet in the existing VPC and a new production Cloud SQL instance in your existing project, and deploy your application using those",
+      "C": "Create a new project, modify your existing VPC to be a Shared VPC, share that VPC with your new project, and replicate the setup you have in the",
+      "D": "Ask the security team to grant you the Project Editor role in an existing production project used by another division of your compan"
+    },
+    "answer": "A",
+    "explanation": "This aligns with Googles recommended practices. By creating a new project, we achieve complete isolation between development and production environments;\nas well as isolate this production application from production applications of other departments.\nRef: https://cloud.google.com/docs/enterprise/best-practices-for-enterprise-organizations#define-hierarchy \nPassing Certification Exams Made Easy visit - https://www.surepassexam.com\nRecommend!! Get the Full Associate-Cloud-Engineer dumps in VCE and PDF From SurePassExam\nhttps://www.surepassexam.com/Associate-Cloud-Engineer-exam-dumps.html (244 New Questions)NEW QUESTION 74\nYou want to find out when users were added to Cloud Spanner Identity Access Management (IAM) roles on your Google Cloud Platform (GCP) project. What\nshould you do in the GCP Console?\nA. Open the Cloud Spanner console to review configurations.\nB. Open the IAM & admin console to review IAM policies for Cloud Spanner roles.\nC. Go to the Stackdriver Monitoring console and review information for Cloud Spanner.\nD. Go to the Stackdriver Logging console, review admin activity logs, and filter them for Cloud Spanner IAM roles.\nAnswer: D\nExplanation: \nhttps://cloud.google.com/monitoring/audit-logging",
+    "source": "ace-sample-2.pdf",
+    "number": 103
+  },
+  {
+    "question": "You are building a multi-player gaming application that will store game information in a database. As the popularity of the application increases, you are concerned\nabout delivering consistent performance. You need to ensure an optimal gaming performance for global users, without increasing the management complexity.\nWhat should you do?",
+    "options": {
+      "A": "Use Cloud SQL database with cross-region replication to store game statistics in the EU, US, and APAC regions.",
+      "B": "Use Cloud Spanner to store user data mapped to the game statistics.",
+      "C": "Use BigQuery to store game statistics with a Redis on Memorystore instance in the front to provide global consistency.",
+      "D": "Store game statistics in a Bigtable database partitioned by username."
+    },
+    "answer": "B",
+    "explanation": "",
+    "source": "ace-sample-2.pdf",
+    "number": 104
+  },
+  {
+    "question": "You have one GCP account running in your default region and zone and another account running in a\nnon-default region and zone. You want to start a new Compute Engine instance in these two Google Cloud Platform accounts using the command line interface.\nWhat should you do?",
+    "options": {
+      "A": "Create two configurations using gcloud config configurations create [NAME]. Run gcloud config configurations activate [NAME] to switch between accounts",
+      "B": "Create two configurations using gcloud config configurations create [NAME]. Run gcloud configurations list to start the Compute Engine instances.",
+      "C": "Activate two configurations using gcloud configurations activate [NAME]. Run gcloud config list to start the Compute Engine instances.",
+      "D": "Activate two configurations using gcloud configurations activate [NAME]. Run gcloud configurations list to start the Compute Engine instances."
+    },
+    "answer": "A",
+    "explanation": "\"Run gcloud configurations list to start the Compute Engine instances\". How the heck are you expecting to \"start\" GCE instances doing \"configuration list\".\nEach gcloud configuration has a 1 to 1 relationship with the region (if a region is defined). Since we have two different regions, we would need to create two\nseparate configurations using gcloud config configurations createRef: https://cloud.google.com/sdk/gcloud/reference/config/configurations/create\nSecondly, you can activate each configuration independently by running gcloud config configurations activate [NAME]Ref:\nhttps://cloud.google.com/sdk/gcloud/reference/config/configurations/activate\nFinally, while each configuration is active, you can run the gcloud compute instances start [NAME] command to start the instance in the configurations\nregion.https://cloud.google.com/sdk/gcloud/reference/compute/instances/start",
+    "source": "ace-sample-2.pdf",
+    "number": 105
+  },
+  {
+    "question": "You created an instance of SQL Server 2017 on Compute Engine to test features in the new version. You want to connect to this instance using the fewest number\nof steps. What should you do?",
+    "options": {
+      "A": "Install a RDP client on your deskto",
+      "B": "Verify that a firewall rule for port 3389 exists.",
+      "C": "Install a RDP client in your deskto",
+      "D": "Set a Windows username and password in the GCP Consol"
+    },
+    "answer": "D",
+    "explanation": "https://cloud.google.com/compute/docs/instances/connecting-to-windows#remote-desktop-connection-app\nhttps://cloud.google.com/compute/docs/instances/windows/generating-credentials https://cloud.google.com/compute/docs/instances/connecting-to-\nwindows#before-you-begin",
+    "source": "ace-sample-2.pdf",
+    "number": 106
+  },
+  {
+    "question": "You need to deploy an application in Google Cloud using savorless technology. You want to test a new version of the application with a small percentage of\nproduction traffic. What should you do?",
+    "options": {
+      "A": "Deploy the application lo Clou",
+      "B": "Ru",
+      "C": "Use gradual rollouts for traffic spelling.",
+      "D": "Deploy the application lo Google Kubemetes Engin"
+    },
+    "answer": "A",
+    "explanation": "",
+    "source": "ace-sample-2.pdf",
+    "number": 107
+  },
+  {
+    "question": "You need to host an application on a Compute Engine instance in a project shared with other teams. You want to prevent the other teams from accidentally\ncausing downtime on that application. Which feature should you use?",
+    "options": {
+      "A": "Use a Shielded VM.",
+      "B": "Use a Preemptible VM.",
+      "C": "Use a sole-tenant node.",
+      "D": "Enable deletion protection on the instance."
+    },
+    "answer": "D",
+    "explanation": "As part of your workload, there might be certain VM instances that are critical to running your application or services, such as an instance running a SQL server, a\nserver used as a license manager, and so on. These VM instances might need to stay running indefinitely so you need a way to protect these VMs from being\ndeleted. By setting the deletionProtection flag, a VM instance can be protected from accidental deletion. If a user attempts to delete a VM instance for which you\nhave set the deletionProtection flag, the request fails. Only a user that has been granted a role with compute.instances.create permission can reset the flag to\nallow the resource to be deleted.Ref: https://cloud.google.com/compute/docs/instances/preventing-accidental-vm-deletion",
+    "source": "ace-sample-2.pdf",
+    "number": 108
+  },
+  {
+    "question": "Users of your application are complaining of slowness when loading the application. You realize the slowness is because the App Engine deployment serving the\napplication is deployed in us-central whereas all users of this application are closest to europe-west3. You want to change the region of the App Engine application\nto europe-west3 to minimize latency. What’s the best way to change the App Engine region?",
+    "options": {
+      "A": "Create a new project and create an App Engine instance in europe-west3",
+      "B": "Use the gcloud app region set command and supply the name of the new region.",
+      "C": "From the console, under the App Engine page, click edit, and change the region drop-down.",
+      "D": "Contact Google Cloud Support and request the change."
+    },
+    "answer": "A",
+    "explanation": "App engine is a regional service, which means the infrastructure that runs your app(s) is located in a specific region and is managed by Google to be redundantly\navailable across all the zones within that region. Once an app engine deployment is created in a region, it cant be changed. The only way is to create a new project\nand create an App Engine instance in europe-west3, send all user traffic to this instance and delete the app engine instance in us-central.\nRef: https://cloud.google.com/appengine/docs/locations",
+    "source": "ace-sample-2.pdf",
+    "number": 109
+  },
+  {
+    "question": "Your company publishes large files on an Apache web server that runs on a Compute Engine instance. The Apache web server is not the only application running\nin the project. You want to receive an email when the egress network costs for the server exceed 100 dollars for the current month as measured by Google Cloud\nPlatform (GCP). What should you do?\nPassing Certification Exams Made Easy visit - https://www.surepassexam.com\nRecommend!! Get the Full Associate-Cloud-Engineer dumps in VCE and PDF From SurePassExam\nhttps://www.surepassexam.com/Associate-Cloud-Engineer-exam-dumps.html (244 New Questions)A. Set up a budget alert on the project with an amount of 100 dollars, a threshold of 100%, and notification type of “email.”\nB. Set up a budget alert on the billing account with an amount of 100 dollars, a threshold of 100%, and notification type of “email.”\nC. Export the billing data to BigQuer\nD. Create a Cloud Function that uses BigQuery to sum the egress network costs of the exported billing data for the Apache web server for the current month and\nsends an email if it is over 100 dollar\nE. Schedule the Cloud Function using Cloud Scheduler to run hourly.\nF. Use the Stackdriver Logging Agent to export the Apache web server logs to Stackdriver Logging.Create a Cloud Function that uses BigQuery to parse the HTTP\nresponse log data in Stackdriver for thecurrent month and sends an email if the size of all HTTP responses, multiplied by current GCP egress prices, totals over\n100 dollar\nG. Schedule the Cloud Function using Cloud Scheduler to run hourly.\nAnswer: C\nExplanation: \nhttps://blog.doit-intl.com/the-truth-behind-google-cloud-egress-traffic-6e8f57b5c2f8\nNEW QUESTION 115\nYou are developing a new web application that will be deployed on Google Cloud Platform. As part of your release cycle, you want to test updates to your\napplication on a small portion of real user traffic. The majority of the users should still be directed towards a stable version of your application. What should you\ndo?",
+    "options": {
+      "A": "Deploy me application on App Engine For each update, create a new version of the same service Configure traffic splitting to send a small percentage of traffic",
+      "B": "Deploy the application on App Engine For each update, create a new service Configure traffic splitting to send a small percentage of traffic to the new service.",
+      "C": "Deploy the application on Kubernetes Engine For a new release, update the deployment to use the new version",
+      "D": "Deploy the application on Kubernetes Engine For a now release, create a new deployment for the new version Update the service e to use the now deployment."
+    },
+    "answer": "D",
+    "explanation": "Keyword, Version, traffic splitting, App Engine supports traffic splitting for versions before releasing.",
+    "source": "ace-sample-2.pdf",
+    "number": 110
+  },
+  {
+    "question": "You are working with a Cloud SQL MySQL database at your company. You need to retain a month-end copy of the database for three years for audit purposes.\nWhat should you do?",
+    "options": {
+      "A": "Save file automatic first-of-the- month backup for three years Store the backup file in an Archive class Cloud Storage bucket",
+      "B": "Convert the automatic first-of-the-month backup to an export file Write the export file to a Coldline class Cloud Storage bucket",
+      "C": "Set up an export job for the first of the month Write the export file to an Archive class Cloud Storage bucket",
+      "D": "Set up an on-demand backup tor the first of the month Write the backup to an Archive class Cloud Storage bucket"
+    },
+    "answer": "C",
+    "explanation": "https://cloud.google.com/sql/docs/mysql/backup-recovery/backups#can_i_export_a_backup https://cloud.google.com/sql/docs/mysql/import-\nexport#automating_export_operations",
+    "source": "ace-sample-2.pdf",
+    "number": 111
+  },
+  {
+    "question": "You want to verify the IAM users and roles assigned within a GCP project named my-project. What should you do?",
+    "options": {
+      "A": "Run gcloud iam roles lis",
+      "B": "Review the output section.",
+      "C": "Run gcloud iam service-accounts lis",
+      "D": "Review the output section."
+    },
+    "answer": "C",
+    "explanation": "Logged onto console and followed the steps and was able to see all the assigned users and roles.",
+    "source": "ace-sample-2.pdf",
+    "number": 112
+  },
+  {
+    "question": "You are running a data warehouse on BigQuery. A partner company is offering a recommendation engine based on the data in your data warehouse. The partner\ncompany is also running their application on Google Cloud. They manage the resources in their own project, but they need access to the BigQuery dataset in your\nproject. You want to provide the partner company with access to the dataset What should you do?",
+    "options": {
+      "A": "Create a Service Account in your own project, and grant this Service Account access to BigGuery in your project",
+      "B": "Create a Service Account in your own project, and ask the partner to grant this Service Account access to BigQuery in their project",
+      "C": "Ask the partner to create a Service Account in their project, and have them give the Service Account access to BigQuery in their project",
+      "D": "Ask the partner to create a Service Account in their project, and grant their Service Account access to the BigQuery dataset in your project"
+    },
+    "answer": "D",
+    "explanation": "https://gtseres.medium.com/using-service-accounts-across-projects-in-gcp-cf9473fef8f0#:~:text=Go%20to%20t",
+    "source": "ace-sample-2.pdf",
+    "number": 113
+  },
+  {
+    "question": "You are migrating a business critical application from your local data center into Google Cloud. As part of your high-availability strategy, you want to ensure that\nany data used by the application will be immediately available if a zonal failure occurs. What should you do?",
+    "options": {
+      "A": "Store the application data on a zonal persistent dis",
+      "B": "Create a snapshot schedule for the dis",
+      "C": "If an outage occurs, create a new disk from the most recent snapshot and attach it to a new VM in another zone.",
+      "D": "Store the application data on a zonal persistent dis"
+    },
+    "answer": "A",
+    "explanation": "",
+    "source": "ace-sample-2.pdf",
+    "number": 114
+  },
+  {
+    "question": "Your company set up a complex organizational structure on Google Could Platform. The structure includes hundreds of folders and projects. Only a few team\nmembers should be able to view the hierarchical structure. You need to assign minimum permissions to these team members and you want to follow Google-\nrecommended practices. What should you do?",
+    "options": {
+      "A": "Add the users to roles/browser role.",
+      "B": "Add the users to roles/iam.roleViewer role.",
+      "C": "Add the users to a group, and add this group to roles/browser role.",
+      "D": "Add the users to a group, and add this group to roles/iam.roleViewer role."
+    },
+    "answer": "C",
+    "explanation": "We need to apply the GCP Best practices. roles/browser Browser Read access to browse the hierarchy for a project, including the folder, organization, and IAM\npolicy. This role doesn't include permission to view resources in the project. https://cloud.google.com/iam/docs/understanding-roles",
+    "source": "ace-sample-2.pdf",
+    "number": 115
+  }
+]
