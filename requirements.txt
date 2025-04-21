@@ -1,0 +1,6 @@
+argparse
+re
+json
+csv
+pandas
+PyPDF2
