@@ -34,6 +34,7 @@ Note: The quiz simulation only supports JSON files.
 Known Issues or Limitations
 ---------------------------
 1. The PDF parsing in `runner.py` may occasionally miss text, so accuracy is not guaranteed to be 100%.
+2. The images will be skipped.
 
 Tested Environment
 ------------------
