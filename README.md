@@ -15,6 +15,9 @@ This project allows you to extract questions from exam dump PDFs and simulate a 
 3. Run the script with:
    `python runner.py <pdf-1> <pdf-2> <pdf-n> --output {csv, json, excel} --outpath <your-output-file-name>`
 
+   With glob partition:
+   `python runner.py *.pdf --output {csv, json, excel} --outpath <your-output-file-name>`
+
 
 Running the Simulation
 ----------------------

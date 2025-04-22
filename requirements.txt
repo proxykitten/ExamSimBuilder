@@ -3,4 +3,4 @@ re
 json
 csv
 pandas
-PyPDF2
+pdfplumber

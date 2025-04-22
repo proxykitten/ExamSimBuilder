@@ -4,33 +4,49 @@ import json
 import csv
 import pandas as pd
 from pathlib import Path
-from PyPDF2 import PdfReader
+import pdfplumber
 
 def extract_qa_from_pdf(pdf_path):
-    reader = PdfReader(pdf_path)
-    text = "\n".join(page.extract_text() for page in reader.pages)
-
-    pattern = re.compile(
-        r"NEW QUESTION\s+\d+.*?\n(.*?)(?=\nA\.)"                # get question
-        r"\n(A\..*?)\nAnswer:\s+([A-Z]+)"                       # Options and Answer
-        r"(?:\nExplanation:\s*(.*?))?(?=\nNEW QUESTION|\Z)",    # Explanation
-        re.DOTALL
-    )
-
-    matches = pattern.findall(text)
     results = []
+    with pdfplumber.open(pdf_path) as pdf:
+        for page_number, page in enumerate(pdf.pages, start=1):
+            text = page.extract_text()
+            if not text:
+                continue
 
-    for question, options, answer, explanation in matches:
-        option_lines = re.findall(r"[A-D]\. .*", options)
-        result = {
-            "question": question.strip(),
-            "options": {opt[0]: opt[3:].strip() for opt in option_lines},
-            "answer": answer.strip(),
-            "explanation": explanation.strip() if explanation else "",
-            "source": Path(pdf_path).name
-        }
-        results.append(result)
+            blocks = re.split(r"(?:\n|^)NEW QUESTION\s+\d+", text)
+            for block in blocks:
+                if not block.strip():
+                    continue
 
+                match = re.search(
+                    r"^(.*?)(?=\nA\.)"                # Question
+                    r"\n(A\..*?)"                     # Options
+                    r"\nAnswer:\s+([A-Z])"            # Answer
+                    r"(?:\nExplanation:\s*(.*?))?$",  # Explanation
+                    block.strip(), re.DOTALL
+                )
+
+                if not match:
+                    continue
+
+                question, options_block, answer, explanation = match.groups()
+                option_lines = re.findall(r"[A-D]\.\s.*", options_block)
+                options = {opt[0]: opt[3:].strip() for opt in option_lines}
+
+                if len(options) < 4:
+                    continue  # skip incomplete
+
+                result = {
+                    "question": question.strip(),
+                    "options": options,
+                    "answer": answer.strip(),
+                    "explanation": explanation.strip() if explanation else "",
+                    "source": Path(pdf_path).name,
+                    "page": page_number,
+                    # "image": f"images/page{page_number}.png"  # optional image placeholder
+                }
+                results.append(result)
     return results
 
 def deduplicate_questions(data):
@@ -49,6 +65,7 @@ def save_to_csv(data, filename):
         row = {
             "number": item["number"],
             "source": item["source"],
+            "page": item["page"],
             "question": item["question"],
             "answer": item["answer"],
             "explanation": item["explanation"],
@@ -69,6 +86,7 @@ def save_to_excel(data, filename):
     df = pd.DataFrame([{
         "number": item["number"],
         "source": item["source"],
+        "page": item["page"],
         "question": item["question"],
         "answer": item["answer"],
         "explanation": item["explanation"],
@@ -77,7 +95,7 @@ def save_to_excel(data, filename):
     df.to_excel(filename, index=False)
 
 def main():
-    parser = argparse.ArgumentParser(description="Extract Q&A from multiple PDFs")
+    parser = argparse.ArgumentParser(description="Extract Q&A from multiple PDFs with improved parsing")
     parser.add_argument("pdf_paths", type=str, nargs="+", help="Paths to input PDF files")
     parser.add_argument("--output", type=str, choices=["csv", "json", "excel"], required=True, help="Output format")
     parser.add_argument("--outpath", type=str, default="output", help="Output filename without extension")
