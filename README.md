@@ -1,6 +1,9 @@
 Quiz Simulation Project
 =======================
 
+LMAOOO, DON'T INSTALL OR CLONE THIS, JUST DON'T, THERE'S A WEBSITE CALLED EXAMPREPPER EXISTS 😂🤣🤣
+=======================
+
 About the Project
 -----------------
 This project allows you to extract questions from exam dump PDFs and simulate a quiz in your browser.
